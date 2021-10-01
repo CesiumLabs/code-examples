@@ -1,7 +1,6 @@
 /**
  * Arithemic Operators
  */
-process.stdout.write('\033c');
 console.log('Arithemic Operators\n');
 
 let a = 90;
