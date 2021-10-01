@@ -1,28 +1,23 @@
-#include<stdio.h>
-void main(){
-	int a, b, c;
-	
-	printf("Please enter value for a :");
-	scanf("%d",&a);
-	printf("\nPlease enter value for b :");
-	scanf("%d",&b);
-	printf("\nPlease enter value for c :");
-	scanf("%d",&c);
-	
-	if(a>b){
-			if(a>c){
-				printf("a is the greatest among the 3 numbers");
-			}
-			else{
-				printf("c is the greatest among the 3 numbers");
-			}
-	}
-		else{
-			if(b>c){
-			printf("b is the greatest among the 3 numbers");
-			}
-			else{
-				printf("c is the greatest among the 3 numbers");
-			}
-		}
-}
+#include<stdio.h>  
+
+int main()    
+
+{    
+
+ int i,fact=1,number;    
+
+ printf("Enter a number: ");    
+
+  scanf("%d",&number);    
+
+    for(i=1;i<=number;i++){    
+
+      fact=fact*i;    
+
+  }    
+
+  printf("Factorial of %d is: %d",number,fact);    
+
+return 0;  
+
+}   
