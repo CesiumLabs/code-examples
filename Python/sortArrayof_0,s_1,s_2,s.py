@@ -21,13 +21,12 @@ def sort012( a, arr_size):
 # Function to print array
 def printArray( a):
 	for k in a:
-		print k,
+		print k
 
 # Driver Program
 arr = [0, 1, 1, 0, 1, 2, 1, 2, 0, 0, 0, 1]
 arr_size = len(arr)
 arr = sort012( arr, arr_size)
-print "Array after segregation :\n",
+
 printArray(arr)
 
-# Contributed by Harshit Agrawal
