@@ -12,9 +12,6 @@ const client = new GCommandsClient({
   },
 });
 
-client.on("ready", () => {
-  console.log("Ready");
-});
 client.on("debug", console.log);
 client.on("log", console.log);
 
