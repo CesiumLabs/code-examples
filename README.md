@@ -19,4 +19,6 @@ You can create 4 pull requests to this repo in any language you like. If you don
 # Commit messages
 It's best to use **[conventional commit message](https://ccm.snowflakedev.org)** format but is not compulsory.
 
+> [Learn more about **Hacktoberfest**](https://hacktoberfest.digitalocean.com)
+
 ## We 💗 Open Source 🎉
