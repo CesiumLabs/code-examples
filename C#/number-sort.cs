@@ -2,7 +2,7 @@ public class Sort
 {
     public static void Main()
     {
-        int[] myArr= new int[5] {1,5,3,8,21};
+        int[] myArr= new int[5] {1,9,728,320,123,845,21};
         Array.Sort(myArr);
 
         foreach (int val in myArr)
