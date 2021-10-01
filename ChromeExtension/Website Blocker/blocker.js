@@ -3,9 +3,9 @@
  */
 
 browser.webRequest.onBeforeRequest.addListener(
-	(url) => {
-		return { cancel: true };
-	},
-	{ urls: ["*://*.scamlink1.com/*", "*://*.scamlink2.com/*"] },
-	["blocking"]
+  (url) => {
+    return { cancel: true };
+  },
+  { urls: ["*://*.scamlink1.com/*", "*://*.scamlink2.com/*"] },
+  ["blocking"]
 );

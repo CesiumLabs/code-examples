@@ -12,17 +12,17 @@ const whenSignedOut = document.getElementById("whenSignedOut");
 const userDetails = document.getElementById("userDetails");
 
 auth.onAuthStateChanged((user) => {
-	if (user) {
-		// signed in
-		console.log(user); //you can play around with this as much as you like now
-		whenSignedIn.hidden = false;
-		whenSignedOut.hidden = true;
-		userDetails.innerHTML = `<h3>Hello ${user.displayName}!</h3> `;
-		document.getElementById("cool").src = user.photoURL;
-	} else {
-		// not signed in
-		whenSignedIn.hidden = true;
-		whenSignedOut.hidden = false;
-		userDetails.innerHTML = "";
-	}
+  if (user) {
+    // signed in
+    console.log(user); //you can play around with this as much as you like now
+    whenSignedIn.hidden = false;
+    whenSignedOut.hidden = true;
+    userDetails.innerHTML = `<h3>Hello ${user.displayName}!</h3> `;
+    document.getElementById("cool").src = user.photoURL;
+  } else {
+    // not signed in
+    whenSignedIn.hidden = true;
+    whenSignedOut.hidden = false;
+    userDetails.innerHTML = "";
+  }
 });
