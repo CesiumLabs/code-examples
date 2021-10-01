@@ -1,9 +1,9 @@
-const { Client, Collection } = require('discord.js');
-const { loadInteractionCommands, loadListeners } = require('./src/lib/setup');
-const { token } = require('./config');
+const { Client, Collection } = require("discord.js");
+const { loadInteractionCommands, loadListeners } = require("./src/lib/setup");
+const { token } = require("./config");
 
 const client = new Client({
-	intents: ['GUILDS', 'GUILD_MESSAGES'],
+	intents: ["GUILDS", "GUILD_MESSAGES"]
 });
 
 client.commands = new Collection();
