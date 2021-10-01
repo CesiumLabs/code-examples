@@ -21,4 +21,8 @@ It's best to use **[conventional commit message](https://ccm.snowflakedev.org)**
 
 > [Learn more about **Hacktoberfest**](https://hacktoberfest.digitalocean.com)
 
+# Join our Discord
+
+[![](https://i.imgur.com/S1V71CD.png)](https://snowflakedev.org/discord)
+
 ## We 💗 Open Source 🎉
