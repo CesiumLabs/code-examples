@@ -7,7 +7,7 @@ using namespace std;
 
 void fib(int n)
 {
-    static int a=1, b=1, c;
+    static int a=0, b=1, c;
     if(n>0)
     {
         c=a+b;
