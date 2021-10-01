@@ -5,5 +5,4 @@ function totalNumbers() {
     };
 };
 
-const number = new Number();
-console.log(totalNumbers());
+totalNumbers();
