@@ -9,7 +9,7 @@ void main() {
     stdout.write('\nEnter a word: ');
     final String? input = stdin.readLineSync(encoding: Encoding.getByName('utf-8')!);
     if (input == null || input.isEmpty) {
-      print('Inputed received no value :(');
+      print('Input received no value :(');
     } else {
       final String reversed = input.split('').reversed.join('');
       print('Input: $input');
