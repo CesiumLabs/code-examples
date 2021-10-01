@@ -1,18 +1,18 @@
 const readline = require("node:readline");
 
 const rl = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout
+	input: process.stdin,
+	output: process.stdout
 });
 
 rl.question("Enter a word: ", (answer) => {
-    if (!answer) return console.log("Input received no value :(");
-    
-    const reversed = answer.split("").reverse().join("");
+	if (!answer) return console.log("Input received no value :(");
 
-    console.log(`Input: ${answer}`);
-    console.log(`Output: ${reversed}`);
-    console.log(`Palindrome: ${answer.toLowerCase() === reversed.toLowerCase() ? "✅" : "❌"}`);
+	const reversed = answer.split("").reverse().join("");
 
-    rl.close();
+	console.log(`Input: ${answer}`);
+	console.log(`Output: ${reversed}`);
+	console.log(`Palindrome: ${answer.toLowerCase() === reversed.toLowerCase() ? "✅" : "❌"}`);
+
+	rl.close();
 });
