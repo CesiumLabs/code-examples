@@ -3,9 +3,9 @@
 pragma solidity ^0.8.0;
 
 contract HelloWorld {
-  string hello = "Hello World!";
+	string hello = "Hello World!";
 
-  function getHello() public returns (string memory) {
-    return hello;
-  }
+	function getHello() public returns (string memory) {
+		return hello;
+	}
 }
