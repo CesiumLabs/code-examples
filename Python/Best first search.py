@@ -1,14 +1,10 @@
 from queue import PriorityQueue
 v = 14
-graph = [[] for i in range(v)]
-  
-# Function For Implementing Best First Search
-# Gives output path having lowest cost
-  
+graph = [[] for i in range(v)]  
   
 def best_first_search(source, target, n):
     visited = [0] * n
-    visited = True
+    visited[0] = True
     pq = PriorityQueue()
     pq.put((0, source))
     while pq.empty() == False:
@@ -19,10 +15,11 @@ def best_first_search(source, target, n):
             break
   
         for v, c in graph[u]:
+            
             if visited[v] == False:
                 visited[v] = True
                 pq.put((c, v))
-    print()
+    print('')
   
 # Function for adding edges to graph
   
