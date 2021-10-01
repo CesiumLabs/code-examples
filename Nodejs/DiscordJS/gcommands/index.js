@@ -7,7 +7,7 @@ const client = new GCommandsClient({
   language: "english",
   commands: {
     slash: "both",
-    context: "false",
+    context: "both",
     prefix: "?",
   },
 });
