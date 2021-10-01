@@ -1,0 +1,31 @@
+{
+  "name": "@devsnowflake/hacktoberfest-2021",
+  "version": "1.0.0",
+  "description": "Hacktoberfest 2021 codebase",
+  "private": true,
+  "scripts": {
+    "format": "prettier --write **/*.{js,ts,jsx,tsx,json,sol,java,html,rb}"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DevSnowflake/hacktoberfest-2021.git"
+  },
+  "keywords": [
+    "hacktoberfest",
+    "2021"
+  ],
+  "author": "Snowflake Studio",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DevSnowflake/hacktoberfest-2021/issues"
+  },
+  "homepage": "https://github.com/DevSnowflake/hacktoberfest-2021#readme",
+  "devDependencies": {
+    "@prettier/plugin-php": "^0.17.5",
+    "@prettier/plugin-ruby": "^2.0.0-rc3",
+    "@prettier/plugin-xml": "^1.1.0",
+    "prettier": "^2.4.1",
+    "prettier-plugin-java": "^1.4.0",
+    "prettier-plugin-solidity": "^1.0.0-beta.18"
+  }
+}

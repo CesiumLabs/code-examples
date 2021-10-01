@@ -1,9 +1,9 @@
-const { registerSlashCommands } = require('../lib/setup');
+const { registerSlashCommands } = require("../lib/setup");
 
 module.exports = {
-	name: 'ready',
+	name: "ready",
 	run: (client) => {
 		console.log(`Logged in as ${client.user.tag}`);
 		registerSlashCommands(client);
-	},
+	}
 };

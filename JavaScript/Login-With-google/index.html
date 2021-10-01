@@ -1,35 +1,25 @@
 <!DOCTYPE html>
 <html>
- <head>
-  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
+	<head>
+		<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-app.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.16.1/firebase-auth.js"></script>
 
-  <script>
+		<script></script>
 
-  </script>
+		<script src="script.js" defer></script>
+	</head>
 
-  <script src="script.js" defer></script>
-</head>
+	<body>
+		<h1>Google Sign-in?</h1>
+		<section id="whenSignedOut">
+			<button id="signInBtn">Sign in with Google</button>
+		</section>
 
-<body>
+		<section id="whenSignedIn" hidden="true">
+			<div id="userDetails"></div>
 
-    <h1>Google Sign-in?</h1>
-     <section id="whenSignedOut">
-
-    <button id="signInBtn">Sign in with Google</button>
-
-  </section>
-
-  <section id="whenSignedIn" hidden="true">
-
-    <div id="userDetails"></div>
-
-    <button id="signOutBtn">Sign Out</button>
-    <img src="" id="cool" alt="ur-image here"></img>
-
-  </section>
-
-
-  
-  </body>
+			<button id="signOutBtn">Sign Out</button>
+			<img src="" id="cool" alt="ur-image here" />
+		</section>
+	</body>
 </html>

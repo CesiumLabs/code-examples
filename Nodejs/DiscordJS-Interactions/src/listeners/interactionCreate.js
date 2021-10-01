@@ -1,5 +1,5 @@
 module.exports = {
-	name: 'interactionCreate',
+	name: "interactionCreate",
 	run: (interaction, client) => {
 		const command = client.commands.get(interaction.commandName);
 		if (command) {
@@ -9,9 +9,9 @@ module.exports = {
 				console.log(error);
 				interaction.reply({
 					content: `An error occured.`,
-					ephemeral: true,
+					ephemeral: true
 				});
 			}
 		}
-	},
+	}
 };
