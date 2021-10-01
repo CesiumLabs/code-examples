@@ -20,8 +20,8 @@ export default function Home() {
 					<div className="flex justify-center h-screen">
 						<div className="my-auto lg:ml-5 md:ml-5 sm:ml-5 xs:ml-3 ml-5 ">
 							<div className="flex items-center justify-center">
-							<ThemeSwitcher />{' '}
-							<h1 className="text-gray-900 dark:text-white text-2xl font-bold">⬅ Click me to see text colour change!</h1>
+								<ThemeSwitcher />{' '}
+								<h1 className="text-gray-900 dark:text-white text-2xl font-bold">{' '}🠔 Click me to see text colour change!</h1>
 							</div>
 						</div>
 					</div>
