@@ -11,8 +11,9 @@ int main() {
         b = a;
         a = c;
 
-        printf("\n%d", b);
+        printf("%d ", b);
     }
+    printf("\nThank you for trying our beautiful version");
 
     return 0;
 }
