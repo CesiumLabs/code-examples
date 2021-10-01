@@ -3,7 +3,7 @@ const { join } = require('path');
 
 const client = new GCommandsClient({
   cmdDir: join(__dirname, 'commands'),
-  //eventDir: join(__dirname, 'events'),
+  eventDir: join(__dirname, 'events'),
   language: "english",
   commands: {
     slash: "both",
