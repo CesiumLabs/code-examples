@@ -1,6 +1,6 @@
 # **Chatbot: Python**
 
-A simple chatbot that I made for school Project.\
+A simple chatbot that I made for school Project, that can generate fake user data along with fancy fonts\
 *Tho this chatbot is dumb sometimes, but it's not too bad lol*.
 
 # Check it Out!
