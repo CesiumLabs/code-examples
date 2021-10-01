@@ -10,7 +10,7 @@ class college
     string name;
     int YoE;
     float HP;
-    bool IsGoverment;
+    bool IsGovernment;
 
     void setFund(int fund_variable)
     {
@@ -30,13 +30,13 @@ int main()
     iitb.name = "Indian Institute og Technology, Bombay";
     iitb.YoE= 1958;
     iitb.HP = 100;
-    iitb.IsGoverment = true;
+    iitb.IsGovernment = true;
     iitb.setFund(100000);
 
     cout<<"College Name: "<<iitb.name<<endl;
     cout<<"YoE: "<<iitb.YoE<<endl;
     cout<<"HP: "<<iitb.HP<<endl;
-    cout<<"IsGov: "<<iitb.IsGoverment<<endl;
+    cout<<"IsGov: "<<iitb.IsGovernment<<endl;
     cout<<iitb.getFund();
 
 }

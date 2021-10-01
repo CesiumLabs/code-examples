@@ -1,12 +1,12 @@
 {
-	"name": "tailwindcss-example-themeswitcher",
-	"version": "0.0.1",
+  "name": "tailwindcss-example-lanyard-card",
+  "version": "0.0.1",
   "author": {
-    "name" : "DiscordAnaxes",
-    "email" : "anaxesoce@gmail.com",
-    "url" : "https://anaxes.xyz"
+    "name": "DiscordAnaxes",
+    "email": "anaxesoce@gmail.com",
+    "url": "https://anaxes.xyz"
   },
-	"private": true,
+  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -14,10 +14,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "moment": "^2.29.1",
     "next": "latest",
     "next-themes": "^0.0.15",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "swr": "^1.0.1",
+    "use-lanyard": "^1.0.1"
   },
   "devDependencies": {
     "@types/react": "^17.0.26",
