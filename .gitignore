@@ -1,3 +1,5 @@
+.vscode
+.eslintrc.json
 Java/*.class
 Kotlin/*.class
 Kotlin/META-INF

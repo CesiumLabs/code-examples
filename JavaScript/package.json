@@ -1,0 +1,6 @@
+{
+	"dependencies": {
+		"node-fetch": "^2.6.5",
+		"prompt": "^1.2.0"
+	}
+}
