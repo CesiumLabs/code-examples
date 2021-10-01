@@ -7,5 +7,5 @@ const youtubeStream = ytdl(url);
 const writable = youtubeStream.pipe(fs.createWriteStream("./video.mp4"));
 
 writable.on("finish", () => {
-    console.log("Download complete!");
+	console.log("Download complete!");
 });
