@@ -1,7 +1,7 @@
 /**
  * Arithemic Operators
  */
-console.log('Arithemic Operators\n');
+console.log("Arithemic Operators\n");
 
 let a = 90;
 let b = 30;
@@ -40,7 +40,7 @@ b--;
 console.log(b);
 // -> 29
 
-console.log('\nAssignment Operators\n');
+console.log("\nAssignment Operators\n");
 
 /**
  * Assignment Operators
@@ -48,28 +48,28 @@ console.log('\nAssignment Operators\n');
 a = 90;
 b = 30;
 
-console.log(a = b);
+console.log((a = b));
 // -> 30
 
-console.log(a += b);
+console.log((a += b));
 // -> 60
 
-console.log(a -= b);
+console.log((a -= b));
 // -> 30
 
-console.log(a *= b);
+console.log((a *= b));
 // -> 900
 
-console.log(a /= b);
+console.log((a /= b));
 // -> 30
 
-console.log(a %= b);
+console.log((a %= b));
 // -> 0
 
-console.log(a **= b);
+console.log((a **= b));
 // -> 0
 
-console.log('\nString Operators\n');
+console.log("\nString Operators\n");
 
 /**
  * String Operators
@@ -89,7 +89,7 @@ console.log(a);
 console.log(a + 5);
 // -> Hello, 5
 
-console.log('\nComparison Operators\n');
+console.log("\nComparison Operators\n");
 
 /**
  * Comparison Operators
@@ -106,37 +106,37 @@ console.log(a === b);
 // -> false
 
 // Not equal
-console.log(a != b)
+console.log(a != b);
 // -> false
 
 // Not equal & type
-console.log(a !== b)
+console.log(a !== b);
 // -> true
 
 a = 3;
 b = 5;
 
 // Greater than
-console.log(a > b)
+console.log(a > b);
 // -> false
 
 // Less than
-console.log(a < b)
+console.log(a < b);
 // -> true
 
 // Greater than or equal to
-console.log(a >= b)
+console.log(a >= b);
 // -> false
 
 // Less than or equal to
-console.log(a <= b)
+console.log(a <= b);
 // -> false
 
 // Temary operator
-console.log(a === b ? true : false)
+console.log(a === b ? true : false);
 // -> false
 
-console.log('\nLogical Operators\n');
+console.log("\nLogical Operators\n");
 
 /**
  * Logical Operators
@@ -144,27 +144,27 @@ console.log('\nLogical Operators\n');
 a = "ye";
 b = null;
 
-console.log(a && b ? true : false)
+console.log(a && b ? true : false);
 // -> false
 
-console.log(a || b ? true : false)
+console.log(a || b ? true : false);
 // -> true
 
-console.log(a ?? b ? true : false)
+console.log(a ?? b ? true : false);
 // -> true
 
-console.log('\nType Operators\n');
+console.log("\nType Operators\n");
 
 /**
  * Type Operators
  */
 a = "y";
-b = { "he": "lo" };
+b = { he: "lo" };
 
 console.log(typeof a);
 // -> string
 
-console.log('\nBitwise Operators\n');
+console.log("\nBitwise Operators\n");
 
 /**
  * Bitwise Operators
@@ -178,7 +178,7 @@ console.log(a & b);
 console.log(a | b);
 // -> 7
 
-console.log(~ a);
+console.log(~a);
 // -> -1
 
 console.log(a ^ b);
