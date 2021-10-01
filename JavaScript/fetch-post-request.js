@@ -1,6 +1,8 @@
-// This example uses node-fetch 2.x.
 
-const fetch = require('node-fetch'); // Don't need for HTML Websites.
+
+const fetch = require('node-fetch'); // Don't need for HTML Websites - This example uses node-fetch 2.x.
+
+import fetch from 'node-fetch'; // ESM Node-fetch.
 
 const url = "https://api.example.com/v1/examples" // API Endpoint URL
 const exampleInteger = 10;
