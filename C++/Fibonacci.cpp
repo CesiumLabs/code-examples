@@ -2,7 +2,7 @@
 SUBMITTED BY :- Deadeye001
 CODE TO GENERATE FIRST n FIBONACCI SEQUENCE
 */
-#include <bits/stdc++.h>
+#include <iostream>
 using namespace std;
 
 void fib(int n)
