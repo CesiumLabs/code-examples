@@ -1,23 +1,23 @@
 {
-    "name": "Example.com",
-    "short_name": "Example.com",
-    "description": "Example pwa example for hacktober (snowflakedevs)",
-    "icons": [
-      {
-        "src": "/JavaScript/progressive-web-app/images/snowflakedev192.png",
-        "sizes": "192x192",
-        "type": "image/png",
-        "purpose": "any maskable"
-      },
-      {
-        "src": "/JavaScript/progressive-web-app/images/snowflakedev512.webp",
-        "sizes": "512x512",
-        "type": "image/png",
-        "purpose": "any maskable"
-      }
-    ],
-    "start_url": "/JavaScript/progressive-web-app/", 
-    "display": "fullscreen",
-    "theme_color": "#5765F0",
-    "background_color": "#5765F0"
-  }
+  "name": "Example.com",
+  "short_name": "Example.com",
+  "description": "Example pwa example for hacktober (snowflakedevs)",
+  "icons": [
+    {
+      "src": "/JavaScript/progressive-web-app/images/snowflakedev192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/JavaScript/progressive-web-app/images/snowflakedev512.webp",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/JavaScript/progressive-web-app/",
+  "display": "fullscreen",
+  "theme_color": "#5765F0",
+  "background_color": "#5765F0"
+}
