@@ -1,0 +1,14 @@
+{
+	"name": "discordjs-interactions",
+	"version": "1.0.0",
+	"description": "Adds slash commands, context menus etc.",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "FC5570",
+	"license": "ISC",
+	"dependencies": {
+		"discord.js": "^13.1.0"
+	}
+}
