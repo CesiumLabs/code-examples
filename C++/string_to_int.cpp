@@ -1,30 +1,21 @@
 #include <iostream>
+#include <cstring>
+
 using namespace std;
-int length(char input[])
-{
-    int len = 0;
-    for (int i = 0; input[i] != '\0'; i++)
-    {
-        len++;
-    }
-    return len;
-}
 
 int stringToNumber(char input[], int last)
 {
     if (last == 0)
     {
-        return input[last] - '0';
+        return input[last];
     }
-    int smallAns = stringToNumber(input, last - 1);
-    int a = input[last] - '0';
-    return smallAns * 10 + a;
+    const int smallAns = stringToNumber(input, last - 1);
+    return smallAns * 10 + input[last];
 }
 
 int stringToNumber(char input[])
 {
-    int len = length(input);
-    return stringToNumber(input, len - 1);
+    return stringToNumber(input, strlen(input) - 1);
 }
 
 
@@ -33,6 +24,3 @@ int main() {
     cin >> input;
     cout << stringToNumber(input) << endl;
 }
-
-
-
