@@ -1,0 +1,14 @@
+{
+  "name": "twitter-tweet-notifier",
+  "version": "1.0.0",
+  "description": "Notifies you when someone tweets something.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --experimental-specifier-resolution=node index.js"
+  },
+  "author": "FC5570",
+  "license": "ISC",
+  "dependencies": {
+    "twitter.js": "^0.6.0"
+  }
+}
