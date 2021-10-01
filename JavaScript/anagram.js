@@ -3,8 +3,6 @@
 // Anagaram - Word/phrase/name formed by rearranging letters of another.
 // SAMPLE INPUT - anagram('anagram', 'nagaram') OUTPUT - true
 
-frequencyStr1 = {'a' : 3 ,'n' : 1, 'g' : 1, 'r' : 1, 'm' : 1}
-
 function anagram(str1, str2) {
     if (str1.length !== str2.length) {
         return false;
