@@ -4,5 +4,5 @@ function totalNumbers() {
         console.log(`${numbers}: Even ${EvenCheck}`)
     };
 };
-var number = new Number();
-console.log(totalNumbers());
+
+totalNumbers();
