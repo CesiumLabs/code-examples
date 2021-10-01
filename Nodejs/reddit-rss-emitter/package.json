@@ -1,0 +1,24 @@
+{
+  "name": "reddit-rss-emitter",
+  "version": "1.0.0",
+  "description": "A reddit new post emitter",
+  "main": "dist/index.js",
+  "scripts": {
+    "test": "nodemon src/index.ts"
+  },
+  "keywords": [
+    "reddit",
+    "rss"
+  ],
+  "author": "Rohan Kumar",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^2.4.1"
+  },
+  "dependencies": {
+    "@types/xml2json": "^0.11.4",
+    "axios": "^0.22.0",
+    "events": "^3.3.0",
+    "xml2json": "^0.12.0"
+  }
+}
