@@ -5,6 +5,7 @@ module.exports = class extends Command {
     super(client, {
       name: 'ping',
       description: 'Ping commnd!',
+      context: "false"
     });
   }
   run({ respond, client }) {
