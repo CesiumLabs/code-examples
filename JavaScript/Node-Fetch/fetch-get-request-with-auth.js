@@ -1,18 +1,13 @@
-const fetch = require('node-fetch'); // Don't need for HTML Websites.
+import fetch from "node-fetch";
 
-const url = "https://api.snowflakedev.org/api/stats"
+const url = "https://api.snowflakedev.org/api/stats";
+
 fetch(url, {
     method: "GET",
     headers: {
-        "Authorization": "API_KEY" // Can be obtained from https://api.snowflakedev.org/dashboard (This example will use snowflakedev's API.)
-    }
-}).then(function (response) {
-    if (response.ok) {
-            // If the response went through and returns 200 OK
-        response.json().then(function (data) {
-            console.log(data); // Console logs data from api
-        });
-    } else {
-        console.log("Response failed...");
-    }
+        "Authorization": "API_KEY", // Can be obtained from https://api.snowflakedev.org/dashboard (This example will use snowflakedev's API.)
+    },
+}).then((response) => {
+    if (response.ok) response.json().then(console.log); // Logs data to console.
+    else console.log("Response failed...");
 });
