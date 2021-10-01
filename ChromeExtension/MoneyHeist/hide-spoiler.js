@@ -43,6 +43,6 @@ function hideSpoiler(node) {
 }
 
 function hideNode(node) {
-	node.textContent = '[TEXT BLOCKED: Fuckers tried to spoil it]';
+	node.textContent = '[TEXT BLOCKED: Money Heist potential spoiler!]';
 	node.style.color = 'red'
 }
