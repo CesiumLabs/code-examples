@@ -1,8 +1,9 @@
 function totalNumbers() {
-    for (var numbers = 0; numbers <= 100; numbers++) {
-        var EvenCheck = Number.isInteger(numbers / 2) ? "✅" : "❌";
+    for (const numbers = 0; numbers <= 100; numbers++) {
+        const EvenCheck = Number.isInteger(numbers / 2) ? "✅" : "❌";
         console.log(`${numbers}: Even ${EvenCheck}`)
     };
 };
-var number = new Number();
+
+const number = new Number();
 console.log(totalNumbers());
