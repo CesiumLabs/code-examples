@@ -3,4 +3,4 @@
 ### run this file by executing the commmand>>   bash hello.sh
 
 
-echo "hello world!"
+echo "hello world!";
