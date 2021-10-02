@@ -1,10 +1,10 @@
 const friends = {
-    hi: {
-        name: "Hi"
-    },
-    hello: {
-        age: 50
-    }
+	hi: {
+		name: "Hi"
+	},
+	hello: {
+		age: 50
+	}
 };
 
 console.log(friends?.hi?.name);
@@ -15,5 +15,3 @@ console.log(friends.hi.age);
 
 console.log(friends?.hi?.age ?? "???");
 // -> ???
-
-

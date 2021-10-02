@@ -1,7 +1,7 @@
-const fs = require('fs');
+const fs = require("fs");
 
 function loadInteractionCommands(client) {
-	const folder = fs.readdirSync('./src/commands');
+	const folder = fs.readdirSync("./src/commands");
 	for (const file of folder) {
 		const command = require(`../commands/${file}`);
 		client.commands.set(command.name, command);
@@ -10,7 +10,7 @@ function loadInteractionCommands(client) {
 }
 
 function loadListeners(client) {
-	const folder = fs.readdirSync('./src/listeners');
+	const folder = fs.readdirSync("./src/listeners");
 	for (const file of folder) {
 		const listener = require(`../listeners/${file}`);
 		console.log(`🚀 Loaded listener: ${listener.name}`);
@@ -24,9 +24,9 @@ function registerSlashCommands(client) {
 	for (const command of commands) {
 		client.application.commands.create({
 			name: command.name,
-			type: command.type ?? 'CHAT_INPUT',
+			type: command.type ?? "CHAT_INPUT",
 			description: command.description,
-			options: command.options,
+			options: command.options
 		});
 	}
 }
@@ -34,5 +34,5 @@ function registerSlashCommands(client) {
 module.exports = {
 	loadInteractionCommands,
 	loadListeners,
-	registerSlashCommands,
+	registerSlashCommands
 };

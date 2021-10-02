@@ -1,8 +1,8 @@
 export default {
-    bearerToken: '',
-    consumerKey: '',
-    consumerSecret: '',
-    accessToken: '',
-    accessTokenSecret: '',
-    username: ''
-}
+	bearerToken: "",
+	consumerKey: "",
+	consumerSecret: "",
+	accessToken: "",
+	accessTokenSecret: "",
+	username: ""
+};
