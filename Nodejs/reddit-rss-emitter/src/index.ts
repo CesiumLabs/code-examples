@@ -1,2 +1,2 @@
-import Manager from "./Manager";
-export = Manager;
+export * from "./Manager";
+export { error, post } from "./interface";

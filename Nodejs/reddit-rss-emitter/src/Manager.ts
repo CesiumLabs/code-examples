@@ -1,7 +1,30 @@
 import { EventEmitter } from "events";
 import axios from "axios";
 import { toJson } from "xml2json";
-export default class Manager extends EventEmitter {
+import { error, post } from "./interface";
+
+export interface Manager {
+    /**
+     * Event fired when manager is ready
+     * @event Manager#ready
+     */
+    on(event: "ready", listener: () => void): this;
+
+    /**
+     * Event is fired when there is a new post
+     * @event Manager#new-post
+     * @param {post} post Reddit post
+     */
+    on(event: "new-post", listener: (post: post) => void): this;
+
+    /**
+     * Event is fired when there is an error
+     * @event Manager#error
+     * @param {error} error
+     */
+    on(event: "error", listener: (error: error) => void): this;
+}
+export class Manager extends EventEmitter {
     private date = new Date().getTime();
     constructor(subreddit_name: string) {
         super();
