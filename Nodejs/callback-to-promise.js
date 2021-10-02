@@ -17,4 +17,11 @@ let string = "hi";
     await promiseFunction();
 
     console.log(string);
+
+    // setTimeout
+    const sleep = require('util').promisify(setTimeout);
+
+    console.log('5');
+    await sleep(5000);
+    console.log('nice');
 })();
