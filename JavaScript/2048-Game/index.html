@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>2048 game</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div class="container">
+  <div class="heading">
+    <h1 class="title">2048</h1>
+    <div class="score-container">0</div>
+  </div>
+  <p class="game-intro">Join the numbers and get to the <strong>2048 tile!</strong></p>
+
+  <div class="game-container">
+    <div class="game-message">
+      <p></p>
+      <div class="lower">
+        <a class="retry-button">Try again</a>
+      </div>
+    </div>
+
+    <div class="grid-container">
+      <div class="grid-row">
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+      </div>
+      <div class="grid-row">
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+      </div>
+      <div class="grid-row">
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+      </div>
+      <div class="grid-row">
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+        <div class="grid-cell"></div>
+      </div>
+    </div>
+
+    <div class="tile-container">
+
+    </div>
+  </div>
+
+  <p class="game-explanation">
+    <strong class="important">How to play:</strong> Use your <strong>arrow keys</strong> to move the tiles. When two tiles with the same number touch, they <strong>merge into one!</strong>
+  </p>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/hammer.js/1.0.6/hammer.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
