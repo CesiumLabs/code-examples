@@ -1,0 +1,36 @@
+a {
+    text-decoration: none;
+}
+
+.card_container {
+    display: grid;
+    margin: 0 auto;
+    width: 80%;
+    justify-content: space-between;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.card {
+    border-radius: 10px;
+    margin: 0 auto;
+    min-height: 380px;
+    height: auto;
+    width: 220px;
+    margin-bottom: 30px;
+    margin-top: 15px;
+    color: black;
+    padding: 18px;
+}
+
+.card_image {
+    height: 250px;
+    width: 100%;
+    border-bottom: 1px solid white;
+    border-radius: 5px;
+}
+
+.card_title {
+    margin-top: 0;
+    color: black;
+    text-align: center;
+}
