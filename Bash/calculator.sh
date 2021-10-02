@@ -1,4 +1,4 @@
-# simple arithmatic calculator using bash scripting
+# simple arithmatic calculator using bash script
 
 ### run this file by executing the commmand>>    bash calculator.sh -o '<operator>' -a <first number> -b <second number>
 
