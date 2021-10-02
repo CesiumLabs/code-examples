@@ -1,5 +1,5 @@
 const numbers = [15, 2, 1, 8, 10, 5, 20, 25];
-const numberSought = 15;
+const numberToFind = 15;
 
-const linearSearch = (numbers, wanted) => numbers.some((e) => e == numberSought);
-linearSearch(numbers, numberSought);
+const linearSearch = numbers => numbers.some((element) => element === numberSought);
+linearSearch(numbers, numberToFind);
