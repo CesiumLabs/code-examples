@@ -46,7 +46,7 @@ const url = "YOUTUBE_VIDEO_URL / YOUTUBE_PLAYLIST_URL";
           resolve("done")
         })
         .on("error", () => {
-          console.log(`\x1b[36m|INFO|\x1b[0m ${id} : Download failes`);
+          console.log(`\x1b[36m|INFO|\x1b[0m ${id} : Download failed`);
           resolve("skip")
         })
         .pipe(fs.createWriteStream(`${id}.mp4`));
