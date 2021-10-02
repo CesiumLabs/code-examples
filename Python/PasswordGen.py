@@ -1,26 +1,27 @@
-from random import choice
+import string
+import random
 
-alnum = list("0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz")
-special_chars = list("@#$%=:?./|~>*()<")
+#Characters List to Generate Password
+characters = list(string.ascii_letters + string.digits + "!@#$%^&*()")
 
-while True:
-    chars_list = list(alnum) # copy the array
+def password_gen():
+	#Length of Password from the User
+	length = int(input("Password length: "))
 
-    length = 0
-    try:
-        length = int(input("\33[92m\33[1mWhat should be the password length? \33[0m"))
-    except ValueError:
-        print("Value must be a number!")
-        continue
-    
-    if length < 1:
-        print("Value must be greater than 0!")
-        continue
-    
-    special = input("\33[33m\33[1mDo you want special characters in your password? \33[0m").lower()
-    if "yes" in special:
-        chars_list += special_chars
-    
-    pw = "".join([choice(chars_list) for _ in range(length)])
-    print("\33[1mPassword: \33[92m" + pw + "\33[0m\n")
-    break
+	#Shuffling the Characters
+	random.shuffle(characters)
+	
+	#Picking random Characters from the given List
+	password = []
+	for i in range(length):
+		password.append(random.choice(characters))
+
+	#Shuffling the Resultant Password
+	random.shuffle(password)
+
+	#Converting the List to String
+	#Printing the List
+	print("".join(password))
+
+## invoking the function
+password_gen()
