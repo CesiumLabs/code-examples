@@ -1,5 +1,5 @@
 fn _check(num: isize, n: isize) -> bool {
-    if num % n == 0
+    num % n == 0
 }
 
 fn main() {
