@@ -3,12 +3,15 @@ const ytdl = require("ytdl-core");
 const fs = require("node:fs");
 const progress = require("progress");
 const youtube = require("youtube-sr").default;
+const readline = (require("readline")).createInterface({ input: process.stdin, output: process.stdout });
+const question = (text) => new Promise((resolve, reject) => readline.question(text, (answer) => resolve(answer)));
 
 const isPlaylist = (url) => !!url.includes("playlist?list")
-
-const url = "YOUTUBE_VIDEO_URL / YOUTUBE_PLAYLIST_URL";
+let url = question("\x1b[36m|INFO|\x1b[0m Put youtube video/playlist URL here: ");
 
 (async() => {
+  url = await url;
+
   let videos = [];
   if(isPlaylist(url)) {
     console.log("\x1b[36m|INFO|\x1b[0m I'm getting a playlist...")
