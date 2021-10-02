@@ -18,9 +18,6 @@ let url = question("\x1b[36m|INFO|\x1b[0m Put youtube video/playlist URL here: "
 
     let playlist = await youtube.getPlaylist(url);
     videos = (await playlist.fetch()).videos;
-
-    // Delete the first element in the array due to duplication during playlist.fetch();
-    videos.shift();
   } else {
     videos.push({
       id: url.split("?v=")[1]
