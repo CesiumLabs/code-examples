@@ -10,7 +10,7 @@
 #
 # input:-
 #
-# ./calculator.sh -o '-' -a 20 -b 5
+# bash calculator.sh -o '-' -a 20 -b 5
 #
 # output:-
 #
