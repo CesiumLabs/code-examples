@@ -1,4 +1,4 @@
-const hexToRGB = hexString => {
+const hexToRGB = (hexString) => {
 	let red = hexString.substring(0, 2);
 	let green = hexString.substring(2, 4);
 	let blue = hexString.substring(4, 6);
@@ -12,4 +12,4 @@ const hexToRGB = hexString => {
 	return obj;
 };
 
-console.log(hexToRGB('ffffff'));
+console.log(hexToRGB("ffffff"));

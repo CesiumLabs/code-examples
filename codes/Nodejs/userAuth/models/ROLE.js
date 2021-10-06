@@ -1,4 +1,4 @@
-const ROLE ={
-    ADMIN:'admin',
-    CUSTOMER:'customer'
-}
+const ROLE = {
+	ADMIN: "admin",
+	CUSTOMER: "customer"
+};

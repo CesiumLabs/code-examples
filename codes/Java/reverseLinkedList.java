@@ -1,4 +1,3 @@
-
 class LinkedList {
 
 	static Node head;
@@ -8,15 +7,13 @@ class LinkedList {
 		int data;
 		Node next;
 
-		Node(int d)
-		{
+		Node(int d) {
 			data = d;
 			next = null;
 		}
 	}
 
-	Node reverse(Node node)
-	{
+	Node reverse(Node node) {
 		Node prev = null;
 		Node current = node;
 		Node next = null;
@@ -30,8 +27,7 @@ class LinkedList {
 		return node;
 	}
 
-	void printList(Node node)
-	{
+	void printList(Node node) {
 		while (node != null) {
 			System.out.print(node.data + " ");
 			node = node.next;
@@ -39,8 +35,7 @@ class LinkedList {
 	}
 
 	// Driver Code
-	public static void main(String[] args)
-	{
+	public static void main(String[] args) {
 		LinkedList list = new LinkedList();
 		list.head = new Node(12);
 		list.head.next = new Node(85);

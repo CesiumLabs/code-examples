@@ -14,7 +14,7 @@ const userDetails = document.getElementById("userDetails");
 auth.onAuthStateChanged((user) => {
 	if (user) {
 		// signed in
-		console.log('Welcome! User :', user); //you can play around with this as much as you like now
+		console.log("Welcome! User :", user); //you can play around with this as much as you like now
 		whenSignedIn.hidden = false;
 		whenSignedOut.hidden = true;
 		userDetails.innerHTML = `<h3>Hello ${user.displayName}!</h3> `;
