@@ -23,9 +23,12 @@
     "@prettier/plugin-php": "^0.17.5",
     "@prettier/plugin-ruby": "^2.0.0-rc3",
     "@prettier/plugin-xml": "^1.1.0",
+    "autoprefixer": "^9",
+    "postcss": "^7",
     "prettier": "^2.4.1",
     "prettier-plugin-java": "^1.4.0",
-    "prettier-plugin-solidity": "^1.0.0-beta.18"
+    "prettier-plugin-solidity": "^1.0.0-beta.18",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
   },
   "dependencies": {
     "next": "^11.1.2",

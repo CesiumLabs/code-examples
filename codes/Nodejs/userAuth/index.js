@@ -10,7 +10,9 @@ const postRoute = require("./routes/posts");
 dotenv.config();
 
 //Connected to db
-mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () => console.log("Connected to DB!"));
+mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true }, () =>
+  console.log("Connected to DB!")
+);
 
 //Middleware
 //For Post Request
@@ -21,5 +23,5 @@ app.use("/api/user", authRoute);
 // app.use('/api/posts',postRoute)
 
 app.listen(5000, () => {
-	console.log("Server up and running!");
+  console.log("Server up and running!");
 });

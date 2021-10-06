@@ -1,9 +1,9 @@
 {
-	"redirects": [
-		{
-			"source": "/discord",
-			"destination": "https://snowflakedev.org/discord",
-			"statusCode": 200
-		}
-	]
+  "redirects": [
+    {
+      "source": "/discord",
+      "destination": "https://snowflakedev.org/discord",
+      "statusCode": 200
+    }
+  ]
 }

@@ -1,4 +1,4 @@
 const ROLE = {
-	ADMIN: "admin",
-	CUSTOMER: "customer"
+  ADMIN: "admin",
+  CUSTOMER: "customer",
 };
