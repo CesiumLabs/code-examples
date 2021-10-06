@@ -1,4 +1,5 @@
 import "tailwindcss/tailwind.css";
+import "../css/text.css"
 import Head from "next/head";
 
 export default function Application({ Component, pageProps }) {
