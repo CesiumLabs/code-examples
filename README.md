@@ -2,7 +2,7 @@
 You can create pull requests to this repo in any language you like. If you don't know what pull requests are, **[click here](https://opensource.com/article/19/7/create-pull-request-github)**.
 
 # What should I do?
-- add examples to this repo related to any language
+- add examples to this repo related to any language (inside `/codes` directory)
 - properly structure, format your codebase
 - any programming language is accepted
 
