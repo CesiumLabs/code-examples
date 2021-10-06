@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Socket.io example</title>
+	<style>
+      body { margin: 0; padding-bottom: 3rem; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+
+      #form { background: rgba(0, 0, 0, 0.15); padding: 0.25rem; position: fixed; bottom: 0; left: 0; right: 0; display: flex; height: 3rem; box-sizing: border-box; backdrop-filter: blur(10px); }
+      #input { border: none; padding: 0 1rem; flex-grow: 1; border-radius: 2rem; margin: 0.25rem; }
+      #input:focus { outline: none; }
+      #form > button { background: #333; border: none; padding: 0 1rem; margin: 0.25rem; border-radius: 3px; outline: none; color: #fff; }
+
+      #messages { list-style-type: none; margin: 0; padding: 0; }
+      #messages > li { padding: 0.5rem 1rem; }
+      #messages > li:nth-child(odd) { background: #efefef; }	
+      #navbar {
+      	width: 100%;
+      	height: 3rem;
+      	display: flex;
+      	justify-content: center;
+      	align-items: center;
+      	background: salmon;
+      	color: white;
+      }
+	</style>
+</head>
+<body>
+	<nav id="navbar" class="navbar"></nav>
+	<ul id="messages"></ul>
+	<form action="" id="form">
+		<input type="text" id="input">
+		<button>send</button>
+	</form>
+	<script src="/socket.io/socket.io.js"></script>
+	<script>
+		const nickname = prompt()
+
+		const socket = io({
+			query: {nickname}
+		})
+
+		const form = document.getElementById('form')
+		const input = document.getElementById('input')
+		const messages = document.getElementById('messages')
+
+		form.addEventListener('submit', function(e){
+			e.preventDefault()
+			if(input.value){
+				pushMessage(`[ ${nickname} ]: ${input.value}`)
+				socket.emit('chat message', input.value)
+				input.value = ''
+			}
+		})
+
+		input.addEventListener('keydown', function(e){
+			socket.emit('someone is typing')
+		})
+
+		input.addEventListener('keyup', function(e){
+			socket.emit('someone finish typing')
+		})
+
+		socket.on('someone is typing', function({otherNickname}){
+			someoneIsTyping(otherNickname)
+		})
+
+		socket.on('someone finish typing', debounce(someoneFinishTyping, 1000))
+
+		socket.on('other user connected', function({otherNickname}){
+			pushMessage(`***${otherNickname} is connected***`)
+		})
+
+		socket.on('other user disconnected', function({otherNickname}){
+			pushMessage(`***${otherNickname} is disconnected***`)
+		})
+
+		socket.on('chat message', function(msg){
+			pushMessage(msg)
+		})
+
+		function pushMessage(msg){
+			const item = document.createElement('li')
+			item.textContent = msg
+			messages.appendChild(item)
+			window.scrollTo(0, document.body.scrollHeight)
+		}
+
+		const getNavbar = () => document.getElementById('navbar')
+
+		function someoneIsTyping(nickname){
+			const navbar = getNavbar()
+			if(nickname) navbar.innerText = `${nickname} is typing ...`
+		}
+
+		function someoneFinishTyping(){
+			const navbar = getNavbar()
+			navbar.innerText = ''
+		}
+
+		function debounce(callback, delay){
+			let timer
+
+			return function(){
+				clearTimeout(timer)
+
+				timer = setTimeout(() => callback.apply(this, arguments), delay)
+			}
+		}
+
+		someoneIsTyping()
+	</script>
+</body>
+</html>
