@@ -4,3 +4,4 @@ Kotlin/META-INF
 node_modules
 package-lock.json
 yarn.lock
+.next/

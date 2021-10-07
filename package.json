@@ -1,31 +1,42 @@
 {
-  "name": "@devsnowflake/hacktoberfest-2021",
+  "name": "@devsnowflake/code-examples",
   "version": "1.0.0",
-  "description": "Hacktoberfest 2021 codebase",
+  "description": "Random code samples",
   "private": true,
   "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
     "format": "prettier --write **/*.{js,ts,jsx,tsx,json,sol,java,html,rb}"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DevSnowflake/hacktoberfest-2021.git"
+    "url": "git+https://github.com/DevSnowflake/code-examples.git"
   },
-  "keywords": [
-    "hacktoberfest",
-    "2021"
-  ],
   "author": "Snowflake Studio",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/DevSnowflake/hacktoberfest-2021/issues"
+    "url": "https://github.com/DevSnowflake/code-examples/issues"
   },
-  "homepage": "https://github.com/DevSnowflake/hacktoberfest-2021#readme",
+  "homepage": "https://github.com/DevSnowflake/code-examples#readme",
   "devDependencies": {
     "@prettier/plugin-php": "^0.17.5",
     "@prettier/plugin-ruby": "^2.0.0-rc3",
     "@prettier/plugin-xml": "^1.1.0",
+    "autoprefixer": "^9",
+    "postcss": "^7",
     "prettier": "^2.4.1",
     "prettier-plugin-java": "^1.4.0",
-    "prettier-plugin-solidity": "^1.0.0-beta.18"
+    "prettier-plugin-solidity": "^1.0.0-beta.18",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+  },
+  "dependencies": {
+    "fast-glob": "^3.2.7",
+    "next": "^11.1.2",
+    "os": "^0.1.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-syntax-highlighter": "^15.4.4",
+    "stream": "^0.0.2"
   }
 }
