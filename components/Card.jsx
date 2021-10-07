@@ -8,4 +8,4 @@ export default function Card({ name, language, snipp }) {
 			</div>
 		</div>
 	);
-};
+}

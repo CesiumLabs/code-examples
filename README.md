@@ -2,7 +2,9 @@
 
 This repository contains different code examples in different programming languages.
 
-> Website: Under construction
+### Website
+
+**[https://codes.snowflakedev.org](https://codes.snowflakedev.org)**
 
 # How do I contribute?
 You can create pull requests to this repo in any language you like. If you don't know what pull requests are, **[click here](https://opensource.com/article/19/7/create-pull-request-github)**.

@@ -4,8 +4,8 @@
  * @returns {object}
  */
 const parseQueryString = (str) => {
-  const qs = new URLSearchParams(str);
-  return Object.fromEntries(qs.entries());
-}
+	const qs = new URLSearchParams(str);
+	return Object.fromEntries(qs.entries());
+};
 
-console.log(parseQueryString('?a=1&b=2')); // { a: '1', b: '2' }
+console.log(parseQueryString("?a=1&b=2")); // { a: '1', b: '2' }
