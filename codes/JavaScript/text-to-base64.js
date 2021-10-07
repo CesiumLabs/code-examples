@@ -1,9 +1,9 @@
 function toText(base64) {
-  return atob(base64);
+	return atob(base64);
 }
 
 function toBase64(text) {
-  return btoa(text);
+	return btoa(text);
 }
 
 const text = prompt("Enter a text:", ""); // Hello World

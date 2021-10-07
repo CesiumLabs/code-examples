@@ -2,15 +2,15 @@ import { singleton } from "./singleton";
 
 @singleton()
 class Person {
-  constructor(public name: string) {}
+	constructor(public name: string) {}
 
-  public getName() {
-    return this.name;
-  }
+	public getName() {
+		return this.name;
+	}
 
-  public sayHello() {
-    console.log(`${this.name}: Hello`);
-  }
+	public sayHello() {
+		console.log(`${this.name}: Hello`);
+	}
 }
 
 const person = new Person("Bob");
