@@ -1,6 +1,9 @@
 const request = async(url, method) => {
     const res = await fetch(url, {
-        method
+        method,
+        headers: {
+            Authorization: "Basic " + new Buffer(`${process.env.NAME}:${process.env.TOKEN}`).toString('base64')
+        }
     })
 
     return res

@@ -4,43 +4,17 @@ import BaseLayout from "../../../components/BaseLayout";
 import {Prism as SyntaxHighlighter} from 'react-syntax-highlighter'
 import { tomorrow } from 'react-syntax-highlighter/dist/cjs/styles/prism'
 import ReactMarkdown from "react-markdown";
+import { getContent } from "../../../lib/github";
 
-export default function Snippet() {
+export default function Snippet({ content }) {
     const router = useRouter()
-    const [content, setContent] = useState()
 
     const { lang, name } = router.query
-
-    useEffect(() => {
-        if (!content && name && lang) {
-            const fetchData = async() => {
-                const res = await fetch("/api/getFile", {
-                    method: "POST",
-                    body: JSON.stringify({
-                        lang,
-                        name
-                    })
-                })
     
-                const data = await res.json()
-
-                if (!data.response) {
-                    router.push("/")
-                    return null
-                }
-    
-                setContent(data.response)
-            }
-    
-            fetchData()
-        }
-    })
     let MD;
 
     if(lang) {
         MD = `\`\`\`${lang.toLowerCase()}` + `\n${content}\n` + "```"
-
-        console.log(MD)
     }
 
     return (
@@ -74,4 +48,17 @@ export default function Snippet() {
     
     )
 
+}
+
+export const getServerSideProps = async(context) => {
+
+    const { lang, name } = context.params
+
+    const content = await getContent(lang, name) 
+
+    return {
+        props: {
+            content
+        }
+    }
 }

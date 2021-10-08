@@ -3,6 +3,7 @@ import { Input, InputGroup, InputRightElement } from "@chakra-ui/input"
 import { Box, Link, Text } from "@chakra-ui/layout"
 import { Popover, PopoverBody, PopoverContent, PopoverTrigger } from "@chakra-ui/popover"
 import _ from "lodash"
+import { useRouter } from "next/router"
 import { useState } from "react"
 import { FaSearch } from "react-icons/fa"
 import { Darken } from "../lib/utils"
@@ -24,9 +25,10 @@ const SearchItem = ({ data }) => {
     )
 }
 
-export default function SearchBar() {
+export default function SearchBar({ snippets }) {
 
     const [options, setOptions] = useState([])
+    const router = useRouter()
 
     // onChange={async(e) => {
     //     const res = await fetch("/api/search", {
@@ -46,17 +48,21 @@ export default function SearchBar() {
             <Popover isOpen={!(_.isEmpty(options))} placement="bottom-start" autoFocus={false}>
                 <PopoverTrigger>
                     <InputGroup>
-                        <Input placeholder="Search..." onChange={async(e) => {
-                            const res = await fetch("/api/search", {
-                                method: "POST",
-                                body: JSON.stringify({
-                                    query: e.target.value.trim()
-                                })
-                            })
+                        <Input placeholder="Search..." onClick={() => {
+                            if (!snippets) {
+                                router.push("/")
+                            }
+                        }}  onChange={(e) => {
+                            if (e.target.value.length == 0) return setOptions([])
 
-                            const data = await res.json()
+                            const newData = snippets.filter( (s) => 
+                            s.toLowerCase().replace(" ", "")
+                                .includes(e.target.value.toLowerCase().replace(" ", ""))
+                        )
 
-                            setOptions(data.response)
+                            setOptions(newData)
+
+                            
                         }} />
                     <InputRightElement>
                         <Icon as={FaSearch} />
