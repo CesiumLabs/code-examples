@@ -1,15 +1,9 @@
 import { NextApiRequest, NextApiResponse } from "next";
-import fs from "fs"
-import path from "path"
-import getConfig from "next/config"
+import { getAllContent } from "../../codes/getter";
 
 const searchCode = async(req: NextApiRequest, res : NextApiResponse) => {
     if (req.method === "POST") {
         const body = JSON.parse(req.body)
-
-        const languages = fs.readdirSync('./codes')
-
-        const snippets = []
 
         if (!body.query || body.query == "") {
             return res.status(200).json({
@@ -17,10 +11,7 @@ const searchCode = async(req: NextApiRequest, res : NextApiResponse) => {
             })
         }
 
-        languages.map((lang) => fs.readdirSync('./codes', {withFileTypes:true}).map((name) => {
-            if (!name.isDirectory()) snippets.push(`${lang} / ${name.name}`)
-            else snippets.push(`${lang} / ${name.name} ISDIR`)
-        }))
+        const snippets = getAllContent()
 
         return res.status(200).json({
             response: snippets.filter((e) => e.toLowerCase().replace(" ", "").includes(body.query.toLowerCase().replace(" ", "")))

@@ -8,7 +8,7 @@ import { useDisclosure } from "@chakra-ui/hooks";
 import { Drawer, DrawerBody, DrawerCloseButton, DrawerContent, DrawerHeader, DrawerOverlay } from "@chakra-ui/modal";
 import SearchBar from "./SearchBar";
 
-export default function MobileNavigation() {
+export default function MobileNavigation({ snippets }) {
 
     const { isOpen, onOpen, onClose } = useDisclosure()
 
@@ -23,7 +23,7 @@ export default function MobileNavigation() {
         >
             <Avatar name="Code Examples" src="/Logo.png" userSelect="none"/>
             <Box m={2}>
-                <SearchBar />
+                <SearchBar snippets={snippets} />
             </Box>
         </Flex>
 

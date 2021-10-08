@@ -4,7 +4,7 @@ import Head from "next/head"
 import MobileNavigation from "./MobileNavigation"
 import Navigation from "./Navigation"
 
-export default function BaseLayout({ pageTitle, children }) {
+export default function BaseLayout({ pageTitle, snippets, children }) {
     const isMobile = useBreakpointValue({
         base: true,
         md: false
@@ -17,10 +17,10 @@ export default function BaseLayout({ pageTitle, children }) {
         </Head>
 
         {isMobile && (
-            <MobileNavigation />
+            <MobileNavigation snippets={snippets} />
         )}
         {!isMobile && (
-            <Navigation />
+            <Navigation snippets={snippets} />
         )}
         
         

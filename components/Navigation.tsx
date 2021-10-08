@@ -1,7 +1,7 @@
 import { Avatar } from "@chakra-ui/avatar";
 import { Box, Divider, Flex, HStack } from "@chakra-ui/layout";
 import SearchBar from "./SearchBar";
-export default function Navigation() {
+export default function Navigation({ snippets }) {
     return (
         <Flex
         minH="60px"
@@ -15,7 +15,7 @@ export default function Navigation() {
                     <Avatar name="Code Examples" src="/Logo.png" userSelect="none" />
                     <Divider orientation="vertical" height="50px" bg="silver" />
 
-                    <SearchBar />
+                    <SearchBar snippets={snippets} />
                 </HStack>
             </Box>
 
