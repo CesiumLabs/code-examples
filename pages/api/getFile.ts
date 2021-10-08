@@ -7,7 +7,7 @@ const searchCode = async(req: NextApiRequest, res : NextApiResponse) => {
 
         const file = () => {
             try {
-                return fs.readFileSync(join(__dirname, 'codes', body.lang, body.name), 'utf-8')
+                return fs.readFileSync(`./codes/${body.lang}/${body.name}`, 'utf-8')
             }
             catch (e) {
                 return null
