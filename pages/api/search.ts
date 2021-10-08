@@ -7,7 +7,7 @@ const searchCode = async(req: NextApiRequest, res : NextApiResponse) => {
     if (req.method === "POST") {
         const body = JSON.parse(req.body)
 
-        const languages = fs.readdirSync(path.join(getConfig().serverRuntimeConfig.PROJECT_ROOT, 'codes'))
+        const languages = fs.readdirSync(path.join(getConfig().serverRuntimeConfig.PROJECT_ROOT, 'public', 'codes'))
 
         const snippets = []
 
@@ -17,7 +17,7 @@ const searchCode = async(req: NextApiRequest, res : NextApiResponse) => {
             })
         }
 
-        languages.map((lang) => fs.readdirSync(path.join(getConfig().serverRuntimeConfig.PROJECT_ROOT, 'codes', lang), {withFileTypes:true}).map((name) => {
+        languages.map((lang) => fs.readdirSync(path.join(getConfig().serverRuntimeConfig.PROJECT_ROOT, 'public', 'codes', lang), {withFileTypes:true}).map((name) => {
             if (!name.isDirectory()) snippets.push(`${lang} / ${name.name}`)
             else snippets.push(`${lang} / ${name.name} ISDIR`)
         }))

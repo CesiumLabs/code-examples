@@ -9,7 +9,7 @@ const searchCode = async(req: NextApiRequest, res : NextApiResponse) => {
 
         const file = () => {
             try {
-                return fs.readFileSync(path.join(getConfig().serverRuntimeConfig.PROJECT_ROOT, 'codes', body.lang, body.name), 'utf-8')
+                return fs.readFileSync(path.join(getConfig().serverRuntimeConfig.PROJECT_ROOT, 'public', 'codes', body.lang, body.name), 'utf-8')
             }
             catch (e) {
                 return null
