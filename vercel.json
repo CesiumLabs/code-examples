@@ -7,8 +7,11 @@
 		}
 	],
 	"functions": {
-		"api/**": {
+		"api/getFile": {
 		  "includeFiles": "codes/**"
-		}
+		},
+		"api/search": {
+			"includeFiles": "codes/**"
+		  }
 	  }
 }
