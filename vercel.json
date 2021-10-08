@@ -7,7 +7,7 @@
 		}
 	],
 	"functions": {
-		"api/*": {
+		"api/**": {
 		  "includeFiles": "codes/**"
 		}
 	  }
