@@ -1,6 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs"
 import path from "path"
+import getConfig from "next/config"
 
 const searchCode = async(req: NextApiRequest, res : NextApiResponse) => {
     if (req.method === "POST") {
@@ -8,7 +9,7 @@ const searchCode = async(req: NextApiRequest, res : NextApiResponse) => {
 
         const file = () => {
             try {
-                return fs.readFileSync(path.join(process.cwd(), 'codes', body.lang, body.name), 'utf-8')
+                return fs.readFileSync(path.join(getConfig().serverRuntimeConfig.PROJECT_ROOT, 'codes', body.lang, body.name), 'utf-8')
             }
             catch (e) {
                 return null
