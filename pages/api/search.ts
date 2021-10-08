@@ -1,11 +1,12 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import fs from "fs"
+import path from "path"
 
 const searchCode = async(req: NextApiRequest, res : NextApiResponse) => {
     if (req.method === "POST") {
         const body = JSON.parse(req.body)
 
-        const languages = fs.readdirSync("./codes/")
+        const languages = fs.readdirSync(path.join(process.cwd(), 'codes'))
 
         const snippets = []
 
@@ -15,7 +16,7 @@ const searchCode = async(req: NextApiRequest, res : NextApiResponse) => {
             })
         }
 
-        languages.map((lang) => fs.readdirSync(`./codes/${lang}`, {withFileTypes:true}).map((name) => {
+        languages.map((lang) => fs.readdirSync(path.join(process.cwd(), 'codes', lang), {withFileTypes:true}).map((name) => {
             if (!name.isDirectory()) snippets.push(`${lang} / ${name.name}`)
             else snippets.push(`${lang} / ${name.name} ISDIR`)
         }))
