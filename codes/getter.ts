@@ -1,11 +1,12 @@
 import fs from "fs"
 import { join } from "path"
+import getConfig from "next/config"
 
-const BASEDIR = __dirname
+const BASEDIR = join(getConfig().serverRuntimeConfig.PROJECT_ROOT, 'codes')
 
 export const getAllContent = () => {
 
-    const languages = fs.readdirSync(BASEDIR)
+    const languages = fs.readdirSync(BASEDIR).filter(e => e!=="getter.ts")
 
     console.log(BASEDIR)
 
