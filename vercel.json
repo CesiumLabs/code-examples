@@ -7,8 +7,8 @@
 		}
 	],
 	"functions": {
-		"pages/api/*.ts": {
-		  "includeFiles": "/codes/**"
+		"pages/api/*.js": {
+		  "includeFiles": "codes/**"
 		}
 	  }
 }
