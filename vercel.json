@@ -5,5 +5,10 @@
 			"destination": "https://snowflakedev.org/discord",
 			"statusCode": 200
 		}
-	]
+	],
+	"functions": {
+		"pages/api/*.js": {
+		  "includeFiles": "codes/**"
+		}
+	  }
 }

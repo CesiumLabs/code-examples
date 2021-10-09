@@ -6,8 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "format": "prettier --write **/*.{js,ts,jsx,tsx,json,sol,java,html,rb}"
+    "start": "next start"
   },
   "repository": {
     "type": "git",
@@ -19,24 +18,34 @@
     "url": "https://github.com/DevSnowflake/code-examples/issues"
   },
   "homepage": "https://github.com/DevSnowflake/code-examples#readme",
-  "devDependencies": {
-    "@prettier/plugin-php": "^0.17.5",
-    "@prettier/plugin-ruby": "^2.0.0-rc3",
-    "@prettier/plugin-xml": "^1.1.0",
-    "autoprefixer": "^9",
-    "postcss": "^7",
-    "prettier": "^2.4.1",
-    "prettier-plugin-java": "^1.4.0",
-    "prettier-plugin-solidity": "^1.0.0-beta.18",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
-  },
   "dependencies": {
-    "fast-glob": "^3.2.7",
-    "next": "^11.1.2",
-    "os": "^0.1.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
+    "@chakra-ui/react": "^1.6.8",
+    "@emotion/react": "^11.4.1",
+    "@emotion/styled": "^11.3.0",
+    "@fontsource/poppins": "^4.5.0",
+    "@fontsource/roboto": "^4.5.1",
+    "@mapbox/rehype-prism": "^0.8.0",
+    "@reach/router": "^1.3.4",
+    "copy-webpack-plugin": "^9.0.1",
+    "framer-motion": "^4.1.17",
+    "lodash": "^4.17.21",
+    "mongodb": "^3.5.9",
+    "next": "11.1.2",
+    "nprogress": "^0.2.0",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-hook-form": "^7.16.1",
+    "react-icons": "^4.3.1",
+    "react-markdown": "^7.0.1",
+    "react-responsive-carousel": "^3.2.21",
     "react-syntax-highlighter": "^15.4.4",
-    "stream": "^0.0.2"
+    "remark-rehype": "^10.0.0",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@types/react": "17.0.24",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2",
+    "typescript": "4.4.3"
   }
 }
