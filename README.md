@@ -1,13 +1,16 @@
-![image](https://user-images.githubusercontent.com/46562212/135563888-44eacec8-3a7a-4444-88d0-d80593aabd68.png)
+# Code Examples
 
-# What is it?
-**[Hacktoberfest, in its 8th year, is a month-long celebration of open source software run by DigitalOcean. During the month of October, we invite you to join open-source software enthusiasts, beginners, and the developer community by contributing to open-source projects.](https://hacktoberfest.digitalocean.com)**
+This repository contains different code examples in different programming languages.
+
+### Website
+
+**[https://codes.snowflakedev.org](https://codes.snowflakedev.org)**
 
 # How do I contribute?
-You can create 4 pull requests to this repo in any language you like. If you don't know what pull requests are, **[click here](https://opensource.com/article/19/7/create-pull-request-github)**.
+You can create pull requests to this repo in any language you like. If you don't know what pull requests are, **[click here](https://opensource.com/article/19/7/create-pull-request-github)**.
 
 # What should I do?
-- add examples to this repo related to any language
+- add examples to this repo related to any language (inside `/codes` directory)
 - properly structure, format your codebase
 - any programming language is accepted
 
@@ -19,10 +22,8 @@ You can create 4 pull requests to this repo in any language you like. If you don
 # Commit messages
 It's best to use **[conventional commit message](https://ccm.snowflakedev.org)** format but is not compulsory.
 
-> [Learn more about **Hacktoberfest**](https://hacktoberfest.digitalocean.com)
-
 # Join our Discord
 
 [![](https://i.imgur.com/S1V71CD.png)](https://snowflakedev.org/discord)
 
-## We 💗 Open Source 🎉
+## 💗 Open Source 🎉
