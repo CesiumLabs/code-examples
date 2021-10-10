@@ -1,0 +1,18 @@
+{
+  "name": "simple-chat-app",
+  "version": "0.0.1",
+  "description": "my fitst socket.io app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12",
+    "socket.io": "^4.2.0"
+  }
+}
