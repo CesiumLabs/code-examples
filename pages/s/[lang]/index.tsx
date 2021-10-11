@@ -2,11 +2,11 @@ import { useRouter } from "next/router";
 import { useEffect } from "react";
 
 export default function SIndex() {
-    const router = useRouter()
+	const router = useRouter();
 
-    useEffect(() => {
-        router.push("/")
-    }, [router])
+	useEffect(() => {
+		router.push("/");
+	}, [router]);
 
-    return null
+	return null;
 }

@@ -1,12 +1,12 @@
-const request = async(url, method) => {
-    const res = await fetch(url, {
-        method,
-        headers: {
-            Authorization: "Basic " + new Buffer(`${process.env.NAME}:${process.env.TOKEN}`).toString('base64')
-        }
-    })
+const request = async (url, method) => {
+	const res = await fetch(url, {
+		method,
+		headers: {
+			Authorization: "Basic " + new Buffer(`${process.env.NAME}:${process.env.TOKEN}`).toString("base64")
+		}
+	});
 
-    return res
-}
+	return res;
+};
 
-export default request
+export default request;

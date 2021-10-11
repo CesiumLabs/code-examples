@@ -20,8 +20,6 @@ Install all the dependencies using yarn
 
 Run the development environment
 
-`yarn start` 
+`yarn start`
 
 Go to http://localhost:3000/ to view the app
-
-

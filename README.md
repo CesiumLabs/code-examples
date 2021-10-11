@@ -7,19 +7,23 @@ This repository contains different code examples in different programming langua
 **[https://codes.snowflakedev.org](https://codes.snowflakedev.org)**
 
 # How do I contribute?
+
 You can create pull requests to this repo in any language you like. If you don't know what pull requests are, **[click here](https://opensource.com/article/19/7/create-pull-request-github)**.
 
 # What should I do?
-- add examples to this repo related to any language (inside `/codes` directory)
-- properly structure, format your codebase
-- any programming language is accepted
+
+-   add examples to this repo related to any language (inside `/codes` directory)
+-   properly structure, format your codebase
+-   any programming language is accepted
 
 # What should I not do?
-- make spam pull requests (like adding/removing whitespace in misc. files such as `.gitignore`, `README.md` etc)
-- make single pull requests for multiple languages/topics
-- can refactor existing codes but make sure to check if there's a pull request open for that
+
+-   make spam pull requests (like adding/removing whitespace in misc. files such as `.gitignore`, `README.md` etc)
+-   make single pull requests for multiple languages/topics
+-   can refactor existing codes but make sure to check if there's a pull request open for that
 
 # Commit messages
+
 It's best to use **[conventional commit message](https://ccm.snowflakedev.org)** format but is not compulsory.
 
 # Join our Discord

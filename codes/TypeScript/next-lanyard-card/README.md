@@ -1,4 +1,4 @@
-# Lanyard Card - Lanyard REST API Card using `use-lanyard`. 
+# Lanyard Card - Lanyard REST API Card using `use-lanyard`.
 
 ## Important:
 

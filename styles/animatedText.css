@@ -1,15 +1,15 @@
 .gradientText {
-    background: linear-gradient(to right, #FFF 20%, rgb(83, 129, 189) 40%, rgb(83, 129, 189) 60%, #FFF 80%);
-    background-size: 200% auto;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    -webkit-background-clip: text;
+	background: linear-gradient(to right, #fff 20%, rgb(83, 129, 189) 40%, rgb(83, 129, 189) 60%, #fff 80%);
+	background-size: 200% auto;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	-webkit-background-clip: text;
 
-    animation: shine 2s linear infinite;
+	animation: shine 2s linear infinite;
 }
 
 @keyframes shine {
-    to {
-      background-position: 200% center;
-    }
+	to {
+		background-position: 200% center;
+	}
 }

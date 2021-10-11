@@ -1,36 +1,36 @@
 import request from "./request";
 
-const CODE_URL = "https://api.github.com/repositories/412320515/contents/codes"
+const CODE_URL = "https://api.github.com/repositories/412320515/contents/codes";
 
-export const getLanguages = async() => {
-    const res = await request("https://api.github.com/repositories/412320515/contents/codes", "GET")
+export const getLanguages = async () => {
+	const res = await request("https://api.github.com/repositories/412320515/contents/codes", "GET");
 
-    const data = await res.json()
+	const data = await res.json();
 
-    return data.map(e=>e.name)
-}
+	return data.map((e) => e.name);
+};
 
-export const getFiles = async(language) => {
-    const res = await request(`https://api.github.com/repositories/412320515/contents/codes/${encodeURIComponent(language)}`, "GET")
+export const getFiles = async (language) => {
+	const res = await request(`https://api.github.com/repositories/412320515/contents/codes/${encodeURIComponent(language)}`, "GET");
 
-    if (res.status == 404) return undefined
+	if (res.status == 404) return undefined;
 
-    const data = await res.json()
+	const data = await res.json();
 
-    return data.map(obj => {
-        return {
-            file: obj.name,
-            dir: obj.type !== "file"
-        }
-    })
-}
+	return data.map((obj) => {
+		return {
+			file: obj.name,
+			dir: obj.type !== "file"
+		};
+	});
+};
 
-export const getContent = async(language, fileName) => {
-    const res = await request(`https://raw.githubusercontent.com/DevSnowflake/code-examples/main/codes/${encodeURIComponent(language)}/${encodeURIComponent(fileName)}`, "GET")
+export const getContent = async (language, fileName) => {
+	const res = await request(`https://raw.githubusercontent.com/DevSnowflake/code-examples/main/codes/${encodeURIComponent(language)}/${encodeURIComponent(fileName)}`, "GET");
 
-    if (res.status == 404) return undefined
+	if (res.status == 404) return undefined;
 
-    const data = await res.text()
+	const data = await res.text();
 
-    return data
-}
+	return data;
+};
