@@ -48,7 +48,11 @@ export default function SearchBar({ snippets }) {
             <Popover isOpen={!(_.isEmpty(options))} placement="bottom-start" autoFocus={false}>
                 <PopoverTrigger>
                     <InputGroup>
-                        <Input placeholder="Search..." onChange={(e) => {
+                        <Input placeholder="Search..." onClick={() => {
+                            if (!snippets) {
+                                router.push("/")
+                            }
+                        }} onChange={(e) => {
                             if (e.target.value.length == 0) return setOptions([])
 
                             const newData = snippets.filter( (s) => 
