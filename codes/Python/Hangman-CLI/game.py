@@ -1,11 +1,14 @@
 import random
 
-def getWord():
-    with open('./nounlist.txt') as f:
-        wordList=[line.strip() for line in f]
-    f.close()
-    word=random.choice(wordList)
-    return word.lower()
+f = open('./nounlist.txt', 'r')
+words_list = f.read().splitlines()
+f.close()
+
+words_len = len(words_list) - 1 # minus one to prevent IndexError
+
+def get_word():
+    # assuming this is a HUGE array, using random.randint is better than random.choice
+    return words_list[random.randint(0, words_len)].lower()
 
 def game(word):
     number_of_guesses=8
@@ -15,7 +18,7 @@ def game(word):
     completed_word='_'*len(word)
 
     print(completed_word)
-    print('Hint: Number of letters={}'.format(len(word)))
+    print(f'Hint: Number of letters={len(word)}')
     
     while guessed!=True and number_of_guesses>0:
         print('Guess a Letter.\n')
@@ -42,7 +45,7 @@ def game(word):
         
         elif len(ch_guess)==len(word) and ch_guess.isalpha():
             if ch_guess in guessed_words:
-                print('You already guessed this word,Try Again.')
+                print('You already guessed this word, Try Again.')
             elif ch_guess!=word:
                 print('Incorrect Guess')
                 number_of_guesses-=1
@@ -51,24 +54,24 @@ def game(word):
                 guessed=True
                 completed_word=word
         else:
-            ('Ehh.Incorrect Guess')
+            print('Ehh. Incorrect Guess')
         print(completed_word)
-        print('Number of guesses remaining: {}'.format(number_of_guesses))
+        print(f'Number of guesses remaining: {number_of_guesses}\n')
         print('\n')
     if guessed:
         print('You Win.You Have guessed the word.')
     else:
-        print("You Lost.You Couldn't guess the word.\n The word was {}".format(word))
+        print(f"You Lost.You Couldn't guess the word.\n The word was {word}")
 
 if __name__ =='__main__':
     print('********Lets Play Hangman********')
-    word=getWord()
+    word=get_word()
     game(word)
     ch='y'
     while ch!='n':
         ch=input('\nWanna play again?(Y/N)').lower()
         if ch=='y':
-            word=getWord()
+            word=get_word()
             game(word)
         else:
             print('Thank you for playing')

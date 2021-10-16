@@ -1,6 +1,6 @@
 from queue import PriorityQueue
 v = 14
-graph = [[] for i in range(v)]  
+graph = [[]] * v 
   
 def best_first_search(source, target, n):
     visited = [0] * n
@@ -19,7 +19,7 @@ def best_first_search(source, target, n):
             if visited[v] == False:
                 visited[v] = True
                 pq.put((c, v))
-    print('')
+    print()
   
 # Function for adding edges to graph
   

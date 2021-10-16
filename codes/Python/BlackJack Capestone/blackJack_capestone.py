@@ -2,14 +2,12 @@ import random
 from replit import clear
 from art import logo
 
-def deal_card():
+def deal_card() -> int:
     """Returns a random card from the deck."""
-    cards = [11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10]
-    card = random.choice(cards)
-    return card
+    return random.choice([11, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 10, 10])
 
 
-def calculate_score(cards):
+def calculate_score(cards) -> int:
     """Take a list of cards and return the score calculated from the cards"""
 
     if sum(cards) == 21 and len(cards) == 2:
@@ -20,7 +18,7 @@ def calculate_score(cards):
     return sum(cards)
 
 
-def compare(user_score, computer_score):
+def compare(user_score, computer_score) -> str:
     # Bug fix. If you and the computer are both over, you lose.
     if user_score > 21 and computer_score > 21:
         return "You went over. You lose 😤"
@@ -41,7 +39,7 @@ def compare(user_score, computer_score):
         return "You lose 😤"
 
 
-def play_game():
+def play_game() -> None:
     print(logo)
 
     user_cards = []
