@@ -3,7 +3,7 @@ from urllib.parse import quote
 
 class ChatBot:
     def __init__(self):
-        user = str(input("Enter Your Name: "))
+        user = input("Enter Your Name: ")
         self.user = user
 
     @staticmethod

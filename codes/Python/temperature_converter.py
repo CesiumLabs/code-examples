@@ -22,22 +22,21 @@ def start():
 
     matches = re.match(r'([+\-]?[0-9]+[.]?[0-9]*)([C|F])?',source.replace(" ", ""), re.M | re.I)
     
-    if(not matches):
+    if not matches:
         print(colored("Invalid format : " + source, "red"))
         return
-    if(matches.group(2)):
+    if matches.group(2):
         defaultFormat = matches.group(2)
 
     target = float(matches.group(1))
 
-    if(defaultFormat.lower() == "c"):
+    if defaultFormat.lower() == "c":
         temp = (9/5 * target) + 32
         print(
             colored(f"\nTemperature in (F) from (C) {str(round(target,2))} = {str(round(temp,2))} F", "blue"))
-    elif(defaultFormat.lower() == "f"):
+    elif defaultFormat.lower() == "f":
         temp = (target - 32) * (5/9)
         print(
             colored(f"\nTemperature in (C) from (F) {str(round(target,2))} = {str(round(temp,2))} C", "blue"))
-
 
 start()
