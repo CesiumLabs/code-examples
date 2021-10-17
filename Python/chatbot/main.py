@@ -1,3 +1,0 @@
-import ext
-
-ext.start()

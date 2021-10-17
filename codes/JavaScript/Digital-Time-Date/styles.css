@@ -1,0 +1,11 @@
+body,
+html {
+	height: 100vh;
+	display: grid;
+	margin: 0;
+	overflow: hidden;
+}
+.clock {
+	margin: auto;
+	text-align: center;
+}

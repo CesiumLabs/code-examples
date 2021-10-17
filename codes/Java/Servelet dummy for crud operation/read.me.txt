@@ -1,0 +1,3 @@
+eclipse :- https://www.eclipse.org/downloads/packages/release/2020-03
+db :- mysql workbench
+server (tomcat 9.0.54) :- https://tomcat.apache.org/download-90.cgi
