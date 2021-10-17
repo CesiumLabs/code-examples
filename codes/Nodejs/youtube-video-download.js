@@ -19,18 +19,18 @@ let url = question("\x1b[36m|INFO|\x1b[0m Put youtube video/playlist URL here: "
 	if (isPlaylist(url)) {
 		console.log("\x1b[36m|INFO|\x1b[0m I'm getting a playlist...");
 
-		let playlist = await youtube.getPlaylist(url);
+		const playlist = await youtube.getPlaylist(url);
 		videos = (await playlist.fetch()).videos;
 	} else {
 		videos.push({
-			id: url.split("?v=")[1]
+			id: url.match(/\?v=(\d+)/)[1]
 		});
 	}
 
 	for (let video of videos) {
 		await (async () =>
 			new Promise((resolve, reject) => {
-				const id = video.id;
+				const { id } = video;
 
 				console.log(`\x1b[36m|INFO|\x1b[0m I started downloading ${id}`);
 
