@@ -12,9 +12,5 @@ fetch(url, {
 		Authorization: "API_KEY", // API KEY obtained from API Endpoint provider.
 		"Content-Type": "application/json"
 	},
-	body: JSON.stringify({
-		exampleInteger: exampleInteger,
-		exampleNumber: exampleNumber,
-		exampleString: exampleString
-	})
+	body: JSON.stringify({ exampleInteger, exampleNumber, exampleString })
 }).then(async (res) => console.log(await res.json()));
