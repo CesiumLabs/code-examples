@@ -9,8 +9,7 @@ import { FaSearch } from "react-icons/fa";
 import { Darken } from "../lib/utils";
 
 const SearchItem = ({ data }) => {
-	const language = data.split(" / ")[0];
-	const name: string = data.split(" / ")[1];
+	const [language, name] = data.split(" / ");
 
 	let ghLink;
 

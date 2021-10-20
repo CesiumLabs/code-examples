@@ -4,7 +4,7 @@ import Head from "next/head";
 import MobileNavigation from "./MobileNavigation";
 import Navigation from "./Navigation";
 
-export default function BaseLayout({ pageTitle, snippets, children }) {
+export default function BaseLayout({ pageTitle, snippets, children, padding = true }) {
 	const isMobile = useBreakpointValue({
 		base: true,
 		md: false
@@ -19,7 +19,7 @@ export default function BaseLayout({ pageTitle, snippets, children }) {
 			{isMobile && <MobileNavigation snippets={snippets} />}
 			{!isMobile && <Navigation snippets={snippets} />}
 
-			<Box py={2}>
+			<Box py={padding ? 2 : 0}>
 				<main>{children}</main>
 			</Box>
 		</>

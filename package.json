@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "format": "prettier --write **/*.{js,ts,jsx,tsx,html,json}"
   },
   "repository": {
     "type": "git",
@@ -29,6 +30,7 @@
     "copy-webpack-plugin": "^9.0.1",
     "framer-motion": "^4.1.17",
     "lodash": "^4.17.21",
+    "lodash.chunk": "^4.2.0",
     "mongodb": "^3.5.9",
     "next": "11.1.2",
     "nprogress": "^0.2.0",
@@ -43,9 +45,11 @@
     "uuid": "^8.3.2"
   },
   "devDependencies": {
+    "@types/lodash.chunk": "^4.2.6",
     "@types/react": "17.0.24",
     "eslint": "7.32.0",
     "eslint-config-next": "11.1.2",
+    "prettier": "^2.4.1",
     "typescript": "4.4.3"
   }
 }

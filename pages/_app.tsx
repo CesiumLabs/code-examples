@@ -9,6 +9,7 @@ import NProgress from "nprogress";
 
 import "@fontsource/poppins";
 import "../styles/animatedText.css";
+import "../styles/global.css";
 
 NProgress.configure({ showSpinner: false });
 
