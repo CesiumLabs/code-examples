@@ -1,14 +1,11 @@
-const pyramid = (rows, char = '*') => {
+const pyramid = (length, char = '*') => {
   if (char.length !== 1)
     throw new Error('`char` must be one character.');
 
-  let res = [];
-  for (let i = 0; i < rows; i++) {
-    let space = ' '.repeat(rows - i - 1);
-    let row = Array(i + 1).fill(char).join(' ');
-    res.push(`${space}${row}${space}`);
-  }
-  return res.join('\n');
+  return Array.from({ length }, (_, i) => {
+      const space = " ".repeat(length - i - 1);
+      return space + Array.from({ length: i + 1 }, () => char).join(" ") + space;
+  }).join("\n");
 }
 
 console.log(pyramid(5));
