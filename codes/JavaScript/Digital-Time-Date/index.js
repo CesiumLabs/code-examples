@@ -1,7 +1,6 @@
-function setClock() {
-	let time = new Date().toLocaleTimeString();
-	let date = new Date().toLocaleDateString("en-GB");
-	document.querySelector(".clock").innerHTML = `<h1>${time}</h1><p>${date}</p>`;
-}
+const clock = document.querySelector(".clock");
 
-setInterval(setClock, 1000);
+setInterval(() => {
+    const date = new Date();
+    clock.innerHTML = `<h1>${date.toLocaleTimeString()}</h1><p>${date.toLocaleDateString("en-GB")}</p>`;
+}, 1000);
