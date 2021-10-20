@@ -36,6 +36,20 @@ function MyApp({ Component, pageProps }: AppProps) {
 					crossOrigin="anonymous"
 					referrerPolicy="no-referrer"
 				/>
+				<meta property="og:url" content="https://codes.snowflakedev.org" />
+                <meta property="og:title" content="Codes | SnowflakeDev Community ❄" />
+                <meta property="og:description" content="Short code snippets written by our open source community!" />
+                <meta property="og:image" content="/Logo.png" />
+
+                <meta property="url" content="https://codes.snowflakedev.org" />
+                <meta property="title" content="Codes | SnowflakeDev Community ❄" />
+                <meta name="description" content="Short code snippets written by our open source community!" />
+                <meta property="image" content="/Logo.png" />
+
+                <meta property="twitter:url" content="https://codes.snowflakedev.org" />
+                <meta property="twitter:title" content="Codes | SnowflakeDev Community ❄" />
+                <meta property="twitter:description" content="Short code snippets written by our open source community!" />
+                <meta property="twitter:image" content="/Logo.png" />
 			</Head>
 			{isLoading && <Image alt="loading" src="/loading.svg" boxSize="50px" position="fixed" bottom="5px" right="5px" draggable="false" />}
 			<Flex flexDirection="column" minH="100vh">
