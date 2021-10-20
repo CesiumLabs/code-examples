@@ -1,11 +1,11 @@
-const { con } = require('./connection')
+const { con } = require('./connection');
 // These functions do not exist here, this is just an example
-const id = generateRandomId()
-const firstName = getFirstName()
-const lastName = getLastName()
-const fullName = `${firstName} ${lastName}`
-const createdAt = getTimestamp()
-const newFirstName = getNewFirstName()
+const id = generateRandomId();
+const firstName = getFirstName();
+const lastName = getLastName();
+const fullName = `${firstName} ${lastName}`;
+const createdAt = getTimestamp();
+const newFirstName = getNewFirstName();
 
 // Insert values into table
 con.query(`INSERT INTO customersTable ('customerId', 'firstName', 'lastName', 'fullName', 'createdAt') VALUES ('${id}', '${firstName}', '${lastName}', '${fullName}', '${createdAt}')`, function (err) {
@@ -19,9 +19,9 @@ con.query(`UPDATE customersTable SET firstName = '${newFirstName}' WHERE custome
 
 // Get all data of a table
 con.query(`SELECT * FROM customersTable`, function (err, result) {
-    if (err) return console.log(err)
+    if (err) return console.log(err);
 
-    if (result) console.log(result)
+    if (result) console.log(result);
 /*   
     [
         {
@@ -48,9 +48,9 @@ con.query(`SELECT * FROM customersTable`, function (err, result) {
 
 // Get all data of a row
 con.query(`SELECT * FROM customersTable WHERE customerId = 'TrtjvmK5qvfJTRHnnUZG'`, function (err, result) {
-    if (err) return console.log(err)
+    if (err) return console.log(err);
 
-    if (result) console.log(result)
+    if (result) console.log(result);
 /*  
     [
         {
