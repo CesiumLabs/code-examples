@@ -17,10 +17,10 @@ if %max_tries% EQU 0 goto lose
 echo. && goto guessing
 
 :win
-echo you win! the number is %answer%.
+echo you won! the answer is %answer%.
 goto end
 
 :lose
-echo you lost! the number is %answer%.
+echo you lost! the answer is %answer%.
 
 :end
