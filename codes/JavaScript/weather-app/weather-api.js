@@ -17,10 +17,10 @@ btn.addEventListener("click", async () => {
 		const { location, current } = await response.json();
 
 		imgIcon.style.display = "block";
-		
+
 		city_name.innerText = location.name;
 		local_time.innerText = location.localtime;
-		
+
 		temp.innerText = current.temp_c;
 		tempText.innerText = current.condition.text;
 		imgIcon.setAttribute("src", current.condition.icon);
