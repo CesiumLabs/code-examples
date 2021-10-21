@@ -26,6 +26,4 @@ if "%PROCESSOR_ARCHITECTURE%" == "X86" (
 )
 
 echo done.
-
-:end
 cd %LASTCWD%
