@@ -39,28 +39,25 @@ export default function Snippet({ content }) {
 					<PopoverBody>Code copied to clipboard.</PopoverBody>
 				</PopoverContent>
 			</Popover>
-			<div style={{ display: "flex", padding: "1rem 0.5rem", backgroundColor: "#2d2d2d" }}>
-				<div style={{ userSelect: "none", paddingRight: ".5rem", opacity: 0.7 }}>{content?.length ? content.split("\n").map((_, i) => <div key={i}>{i + 1}</div>) : <div>1</div>}</div>
-				<ReactMarkdown
-					className="code-area"
-					components={{
-						code({ node, inline, className, children, ...props }) {
-							const match = /language-(\w+)/.exec(className || "");
-							return !inline && match ? (
-								<SyntaxHighlighter style={tomorrow} language={match[1].toLowerCase()} {...props}>
-									{String(children).replace(/\n$/, "")}
-								</SyntaxHighlighter>
-							) : (
-								<code className={className} {...props}>
-									{children}
-								</code>
-							);
-						}
-					}}
-				>
-					{md}
-				</ReactMarkdown>
-			</div>
+			<ReactMarkdown
+				className="code-area"
+				components={{
+					code({ node, inline, className, children, ...props }) {
+						const match = /language-(\w+)/.exec(className || "");
+						return !inline && match ? (
+							<SyntaxHighlighter style={tomorrow} language={match[1].toLowerCase()} {...props} showLineNumbers={true}>
+								{String(children).replace(/\n$/, "")}
+							</SyntaxHighlighter>
+						) : (
+							<code className={className} {...props}>
+								{children}
+							</code>
+						);
+					}
+				}}
+			>
+				{md}
+			</ReactMarkdown>
 		</BaseLayout>
 	);
 }
