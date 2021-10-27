@@ -1,8 +1,7 @@
-const fs = require("fs");
+const { readdirSync } = require("fs");
 
 function loadInteractionCommands(client) {
-	const folder = fs.readdirSync("./src/commands");
-	for (const file of folder) {
+	for (const file of readdirSync("./src/commands")) {
 		const command = require(`../commands/${file}`);
 		client.commands.set(command.name, command);
 		console.log(`🚀 Loaded command: ${command.name}`);
@@ -10,12 +9,13 @@ function loadInteractionCommands(client) {
 }
 
 function loadListeners(client) {
-	const folder = fs.readdirSync("./src/listeners");
-	for (const file of folder) {
+	for (const file of readdirSync("./src/listeners")) {
 		const listener = require(`../listeners/${file}`);
-		console.log(`🚀 Loaded listener: ${listener.name}`);
+		const listenerName = file.slice(0, -3);
 
-		client.on(listener.name, (...args) => listener.run(...args, client));
+		console.log(`🚀 Loaded listener: ${listenerName}`);
+
+		client.on(listenerName, (...args) => listener(...args, client));
 	}
 }
 

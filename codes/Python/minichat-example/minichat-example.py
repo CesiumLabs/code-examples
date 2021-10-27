@@ -1,15 +1,14 @@
 # pip3 install minichat
 from minichat import minichat
-import os
+from os import system
 
 bot = minichat.Minichat()
 
-os.system("cls" if os.name == "nt" else "clear")
+system("cls" if os.name == "nt" else "clear")
 
 while True:
     msg = input("You: ")
     if msg == ".exit":
         break
 
-    response = bot.chat(msg)
-    print(f"Bot: {response}")
+    print(f"Bot: {bot.chat(msg)}")

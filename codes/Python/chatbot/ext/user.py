@@ -6,13 +6,9 @@ class User:
 
     @staticmethod
     def base():
-        source = requests.get('https://api.deltaa.me/users')
-        data = source.json()
-        reply = data['users'][0]
-        
-        return reply
+        return requests.get('https://api.deltaa.me/users').json()['users'][0]
 
-    def user(self):
+    def user(self) -> None:
         base = User.base()
 
         print(f"""

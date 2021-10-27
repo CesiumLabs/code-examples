@@ -20,7 +20,7 @@ def Generator():
     to go back to main menu.
     """)
 
-    opt = str(input('Enter the Number corresponding to the option:'))
+    opt = input('Enter the Number corresponding to the option:')
 
     if opt == '1':
         Font().aesthetic()
@@ -67,7 +67,7 @@ def MenuContent():
 
 def start():
     MenuContent()
-    opt = str(input('Select: '))
+    opt = input('Select: ')
     
     if opt == '1':
         ChatBot().bot()

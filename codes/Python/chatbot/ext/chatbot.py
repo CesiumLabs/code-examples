@@ -1,18 +1,14 @@
 import requests
-
+from urllib.parse import quote
 
 class ChatBot:
     def __init__(self):
-        user = str(input("Enter Your Name: "))
+        user = input("Enter Your Name: ")
         self.user = user
 
     @staticmethod
-    def chat(message : str):
-        source = requests.get(f'https://api.deltaa.me/chatbot?message={message}')
-        data = source.json()
-        reply = data['message']
-        
-        return reply
+    def chat(message: str):
+        return requests.get(f'https://api.deltaa.me/chatbot?message={quote(message)}').json()['message']
 
     # this is the main method to use chatbot
     def bot(self):
@@ -25,13 +21,11 @@ class ChatBot:
         print(intro)
 
         while True:
-            userMessage = str(input("You: "))
-            print(f"Bot: {ChatBot.chat(userMessage)}")
-            print('\n')
+            userMessage = input("You: ")
+            print(f"Bot: {ChatBot.chat(userMessage)}\n")
             
             # to break chat loop
             # if user says 'Bye' or 'bye', 
 
-            stop = ['Bye', 'bye']
-            if userMessage in stop:
+            if userMessage.lower() == "bye":
                 break

@@ -10,10 +10,11 @@ A simple digital clock which displays current time followed by date.
 Codepen link: [Digital Clock](https://codepen.io/vaishak10/pen/XWgQYxm)
 
 ## Snapshot
+
 ![digital-time](digital-time.PNG)
 
 ## Resources
 
-- [Date.prototype.toLocaleDateString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString)
-- [Date.prototype.toLocaleTimeString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString)
-- [setInterval](https://developer.mozilla.org/en-US/docs/Web/API/setInterval)
+-   [Date.prototype.toLocaleDateString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleDateString)
+-   [Date.prototype.toLocaleTimeString()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date/toLocaleTimeString)
+-   [setInterval](https://developer.mozilla.org/en-US/docs/Web/API/setInterval)
