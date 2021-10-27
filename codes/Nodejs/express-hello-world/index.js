@@ -6,7 +6,7 @@ app.get("/", (req, res) => {
 });
 
 app.all("*", (req, res) => {
-	res.status(404).send("Opps, looks like you got lost!");
+	res.status(404).send("Oops, looks like you got lost!");
 });
 
 app.listen(3000, () => console.log("HTTP server listening on port 3000!"));

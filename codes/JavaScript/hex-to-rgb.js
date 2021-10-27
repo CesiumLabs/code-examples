@@ -1,15 +1,9 @@
 const hexToRGB = (hexString) => {
-	let red = hexString.substring(0, 2);
-	let green = hexString.substring(2, 4);
-	let blue = hexString.substring(4, 6);
-
-	red = parseInt(red, 16);
-	green = parseInt(green, 16);
-	blue = parseInt(blue, 16);
-
-	const obj = { red, green, blue };
-
-	return obj;
+	return {
+		red: parseInt(hexString.slice(0, 2), 16),
+		green: parseInt(hexString.slice(2, -2), 16),
+		blue: parseInt(hexString.slice(-2), 16)
+	};
 };
 
 console.log(hexToRGB("ffffff"));

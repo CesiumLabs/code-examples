@@ -13,7 +13,7 @@ module.exports = {
 	],
 
 	run(interaction) {
-		const user = interaction.options.get("user").user;
+		const { user } = interaction.options.get("user");
 		const avatar = user.displayAvatarURL({ dynamic: true, size: 4096 });
 
 		const row = new MessageActionRow().addComponents(

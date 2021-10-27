@@ -6,38 +6,21 @@ class Font:
         pass
 
     @staticmethod
-    def base(style : str, message : str):
-
+    def base(style: str, message: str) -> dict:
         """
         Available style options: aesthetic, base64, fliptext, fancy, reverse
         """
 
-        source = requests.get(f'https://api.deltaa.me/{style}?text={message}')
-        data = source.json()
-        reply = data
-
-        return reply
+        return requests.get(f'https://api.deltaa.me/{style}?text={message}').json()
 
     def aesthetic(self):
-        text = str(input("Enter the text: "))
+        print(f"Fancy: {Font.base('aesthetic', input('Enter the text: '))['aesthetic']}")
 
-        aesthetic = Font.base('aesthetic' , text)['aesthetic']
-        print(f"Aesthetic: {aesthetic}")
+    def fliptext(self) -> None:
+        print(f"Fancy: {Font.base('fliptext', input('Enter the text: '))['fliptext']}")
 
-    def fliptext(self):
-        text = str(input("Enter the text: "))
+    def fancy(self) -> None:
+        print(f"Fancy: {Font.base('fancy', input('Enter the text: '))['fancy']}")
 
-        fliptext = Font.base('fliptext' , text)['fliptext']
-        print(f"FlipText: {fliptext}")
-
-    def fancy(self):
-        text = str(input("Enter the text: "))
-
-        fancy = Font.base('fancy' , text)['fancy']
-        print(f"Fancy: {fancy}")
-
-    def reverse(self):
-        text = str(input("Enter the text: "))
-
-        reverse = text[::-1]
-        print(f"Reverse: {reverse}")
+    def reverse(self) -> None:
+        print(f"Reverse: {input('Enter the text: ')[::-1]}")

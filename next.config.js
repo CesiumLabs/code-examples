@@ -1,7 +1,14 @@
+/** @type {import('next').NextConfig} */
 module.exports = {
-	webpack5: true,
-	webpack: (config) => {
-		config.resolve.fallback = { fs: false, path: false };
-		return config;
+	target: "serverless",
+	reactStrictMode: true,
+	typescript: {
+		ignoreBuildErrors: true
+	},
+	experimental: {
+		nftTracing: true
+	},
+	serverRuntimeConfig: {
+		PROJECT_ROOT: process.cwd()
 	}
 };
