@@ -5,4 +5,4 @@ indicating the sign of a number passed into the argument.
 */
 
 let x = 4321;
-console.log(parseInt(x.toString().split('').reverse().join('')) * Math.sign(x));
+console.log(parseInt(x.toString().split("").reverse().join("")) * Math.sign(x));

@@ -1,6 +1,6 @@
 {
-    "DB_HOST": "yourDBhost",
-    "DB_USER": "yourDBuser",
-    "DB_PASS": "yourDBpass",
-    "DB_NAME": "yourDBname"
+	"DB_HOST": "yourDBhost",
+	"DB_USER": "yourDBuser",
+	"DB_PASS": "yourDBpass",
+	"DB_NAME": "yourDBname"
 }
