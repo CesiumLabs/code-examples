@@ -15,15 +15,12 @@ void free_file(file_contents_t f) {
 }
 
 file_contents_t read_file(const char * filename) {
-    file_contents_t out = malloc(sizeof(_file_contents_t));
-    
-    out->file_size = 0;
     FILE * fp = fopen(filename, "r");
-    
-    if (fp == NULL) {
-        free_file(out);
+    if (fp == NULL)
         return NULL;
-    }
+    
+    file_contents_t out = malloc(sizeof(_file_contents_t));
+    out->file_size = 0;
     
     fseek(fp, 0, SEEK_END);
     
