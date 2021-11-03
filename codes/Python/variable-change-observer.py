@@ -6,7 +6,6 @@ class Observable():
         self.oldValue = None
 
     def get_value(self):
-        print("Get value function called")
         return self._value
 
     def set_value(self, value):
@@ -26,8 +25,8 @@ class Observable():
 
 OBSERVED_VARIABLE = Observable(20)
 
-OBSERVED_VARIABLE.onChange(lambda: print(f"Changed value from {OBSERVED_VARIABLE.oldValue} to {OBSERVED_VARIABLE._value}"))
-OBSERVED_VARIABLE.onWrite(lambda: print(f"Wrote {OBSERVED_VARIABLE._value}"))
+OBSERVED_VARIABLE.onChange(lambda: print(f"Changed value from {OBSERVED_VARIABLE.oldValue} to {OBSERVED_VARIABLE.value}"))
+OBSERVED_VARIABLE.onWrite(lambda: print(f"Wrote {OBSERVED_VARIABLE.value}"))
 
 OBSERVED_VARIABLE.value = 18 #Logs "Wrote 18" and "Changed value from 20 to 18"
 OBSERVED_VARIABLE.value = 18 #Only logs "Wrote 18" since the value didn't change
