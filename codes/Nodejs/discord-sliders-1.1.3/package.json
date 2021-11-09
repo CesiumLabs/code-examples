@@ -1,0 +1,36 @@
+{
+  "name": "discord-sliders",
+  "version": "1.1.3",
+  "description": "The easiest way to create DiscordEmbedPages controlled with buttons.",
+  "main": "index.js",
+  "dependencies": {
+    "discord.js": "^12.5.3",
+    "discord-buttons": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Deadr3amer/discord-sliders.git"
+  },
+  "keywords": [
+    "discord",
+    "discord-buttons",
+    "discord-slider",
+    "discord-sliders",
+    "discord.js",
+    "buttons",
+    "slide",
+    "slider",
+    "sliders",
+    "slide"
+  ],
+  "author": "Deadreamer | Deadr3amer",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Deadr3amer/discord-sliders/issues"
+  },
+  "homepage": "https://github.com/Deadr3amer/discord-sliders#readme"
+}
