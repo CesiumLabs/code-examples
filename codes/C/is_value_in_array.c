@@ -4,7 +4,7 @@ int value_in_array(float val, float arr[], float length) {
     for(int i = 0; i < length; i++) {
         if(arr[i] == val) {
             return 1;
-		}
+	}
     }
     return 0;
 }
