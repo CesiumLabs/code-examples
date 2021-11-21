@@ -3,18 +3,18 @@
  * @param {number} a first number
  * @param {number} b second number
  * @returns {number} the greatest common divisor
-*/
+ */
 function euclid(a, b) {
 	a = Math.abs(a);
 	b = Math.abs(b);
-	if(a < b) {
+	if (a < b) {
 		let holder = a;
 		a = b;
 		b = holder;
 	}
 	let r = 0;
-	while(b > 0) {
-		r = a%b;
+	while (b > 0) {
+		r = a % b;
 		a = b;
 		b = r;
 	}
