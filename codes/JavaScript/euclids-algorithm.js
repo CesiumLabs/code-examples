@@ -4,7 +4,7 @@
  * @param {number} b second number
  * @returns {number} the greatest common divisor
  */
- function euclid(a, b) {
+function euclid(a, b) {
 	a = Math.abs(a);
 	b = Math.abs(b);
 	if (a < b) {
@@ -32,7 +32,7 @@ console.log(euclid(-999, -837)); //27
  * @param {number} b second number
  * @returns {number} the greatest common divisor
  */
- function euclidRecursive(a, b) {
+function euclidRecursive(a, b) {
 	a = Math.abs(a);
 	b = Math.abs(b);
 	if (a < b) {
@@ -41,9 +41,9 @@ console.log(euclid(-999, -837)); //27
 		b = holder;
 	}
 
-	if(a === 0) return b;
-    if(b === 0) return a;
-    return euclidRecursive(b, a % b);
+	if (a === 0) return b;
+	if (b === 0) return a;
+	return euclidRecursive(b, a % b);
 }
 
 console.log(euclidRecursive(15, 20)); //5
