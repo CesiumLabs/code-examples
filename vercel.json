@@ -4,6 +4,12 @@
 			"source": "/discord",
 			"destination": "https://snowflakedev.org/discord",
 			"statusCode": 200
+		},
+
+		{
+			"source": "/github",
+			"destination": "https://github.com/devsnowflake/code-examples",
+			"statusCode": 200
 		}
 	]
 }
