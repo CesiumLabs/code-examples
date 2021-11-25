@@ -6,6 +6,7 @@ import _ from "lodash";
 import { useRouter } from "next/router";
 import { useState } from "react";
 import { FaSearch } from "react-icons/fa";
+import searchEngine from "../lib/search";
 import { Darken } from "../lib/utils";
 
 const SearchItem = ({ data }) => {
@@ -55,9 +56,7 @@ export default function SearchBar({ snippets }) {
 							}}
 							onChange={(e) => {
 								if (e.target.value.length == 0) return setOptions([]);
-
-								const newData = snippets.filter((s) => s.toLowerCase().replace(" ", "").includes(e.target.value.toLowerCase().replace(" ", "")));
-
+								const newData = searchEngine<any>(e.target.value, [], snippets);
 								setOptions(newData);
 							}}
 						/>
