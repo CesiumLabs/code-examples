@@ -14,8 +14,8 @@ export default function Snippet({ content }) {
 	const md = `\`\`\`${lang || "text"}\n${content || "No content available!"}\n\`\`\``;
 
 	useEffect(() => {
-		if (name.endsWith("ISDIR")) {
-			router.push(`https://github.com/devsnowflake/tree/main/code-examples/${lang}/${name}`);
+		if (typeof name === "string" && name.endsWith(" ISDIR")) {
+			router.push(`https://github.com/DevSnowflake/code-examples/tree/main/codes/${lang}/${name.replace(" ISDIR", "")}`);
 		}
 	});
 	return (
