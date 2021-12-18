@@ -1,18 +1,18 @@
 #include<bits/stdc++.h>
 using namespace std;
-void selectionsort(vector<int> &a, int n)
+void BubbleSort(vector<int>& a, int n)
 {
     for(int i=0;i<n;i++)
     {
-      int minimum_index =i;
-      for(int j=i+1;j<n;j++)
-      {
-          if(a[j] < a[minimum_index])
-          {
-              minimum_index =j;
-          }
-      }
-      swap(a[i],a[minimum_index]);
+        for(int j=i+1;j<n;j++)
+        {
+            if(a[j] < a[i])
+            {
+                int temp = a[j];
+                a[j]= a[i];
+                a[i] =temp;
+            }
+        }
     }
 }
 int main()
@@ -26,11 +26,12 @@ int main()
         cin>>x;
         a.push_back(x);
     }
-    selectionsort(a,n);
+    BubbleSort(a,n);
     for(int i=0;i<n;i++)
     {
-        cout<<a[i]<<" ";
+        cout<<a[i]<<' ';
     }
     cout<<endl;
     return 0;
 }
+
