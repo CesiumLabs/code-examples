@@ -35,6 +35,6 @@ chain.add_block(Block(
     }
 ))
 
-# for block in chain.chain:
-#     print("Hash:",block.hash)
-#     print("Data:",block.data)
+for block in chain.chain:
+    print("Hash:",block.hash)
+    print("Data:",block.data)
