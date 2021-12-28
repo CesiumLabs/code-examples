@@ -19,8 +19,10 @@ You can create pull requests to this repo in any language you like. If you don't
 # What should I not do?
 
 -   make spam pull requests (like adding/removing whitespace in misc. files such as `.gitignore`, `README.md` etc)
--   make single pull requests for multiple languages/topics
+-   make single pull requests for multiple languages/topics (you can however include maximum 2 languages in one pull request)
 -   can refactor existing codes but make sure to check if there's a pull request open for that
+-   Add cloned repositories into the code base.
+-   Any type of promotion like (discord server link, affiliated link etc). Demo websites linked in readme or comments that are related to the code are allowed.
 
 # Commit messages
 

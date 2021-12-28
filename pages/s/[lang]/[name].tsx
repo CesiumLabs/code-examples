@@ -7,12 +7,17 @@ import { getContent } from "../../../lib/github";
 import { Stack } from "@chakra-ui/layout";
 import { FaCopy } from "react-icons/fa";
 import { Button, PopoverTrigger, Popover, PopoverContent, PopoverCloseButton, PopoverHeader, PopoverBody } from "@chakra-ui/react";
-
+import { useEffect } from "react";
 export default function Snippet({ content }) {
 	const router = useRouter();
 	const { lang, name } = router.query;
 	const md = `\`\`\`${lang || "text"}\n${content || "No content available!"}\n\`\`\``;
 
+	useEffect(() => {
+		if (typeof name === "string" && name.endsWith(" ISDIR")) {
+			router.push(`https://github.com/DevSnowflake/code-examples/tree/main/codes/${lang}/${name.replace(" ISDIR", "")}`);
+		}
+	});
 	return (
 		<BaseLayout pageTitle={`${lang} / ${name}`} padding={false}>
 			<Popover>
@@ -62,11 +67,10 @@ export default function Snippet({ content }) {
 	);
 }
 
-export const getServerSideProps = async (context) => {
+export const getServerSideProps = async (context: any) => {
 	const { lang, name } = context.params;
 
 	const content = (await getContent(lang, name)) || null;
-
 	return {
 		props: {
 			content: content?.trim() || null

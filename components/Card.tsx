@@ -2,9 +2,10 @@ import { Box, Badge } from "@chakra-ui/react";
 import Link from "next/link";
 
 export default function Card({ language = "Text", fileName = "unknown" }) {
+	const link = !fileName.endsWith(" ISDIR") ? `/s/${language}/${fileName}` : `https://github.com/DevSnowflake/code-examples/tree/main/codes/${language}/${fileName.replace(" ISDIR", "")}`;
 	return (
 		<>
-			<Link href={`/s/${language}/${fileName.replace(" ISDIR", "")}`}>
+			<Link href={link}>
 				<Box
 					cursor={"pointer"}
 					_hover={{
