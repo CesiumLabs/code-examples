@@ -30,7 +30,7 @@ chain = BlockChain()
 chain.add_block(Block(
     timestamp=str(datetime.now()),
     data={
-        'name': 'Hello there :D',
+        'name': 'Hello there! :D',
         'date_added': str(datetime.now())
     }
 ))
