@@ -2,13 +2,13 @@
 	"redirects": [
 		{
 			"source": "/discord",
-			"destination": "https://snowflakedev.org/discord",
+			"destination": "https://cesiumlabs.xyz/discord",
 			"statusCode": 200
 		},
 
 		{
 			"source": "/github",
-			"destination": "https://github.com/devsnowflake/code-examples",
+			"destination": "https://github.com/cesiumlabs/code-examples",
 			"statusCode": 200
 		}
 	]
