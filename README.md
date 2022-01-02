@@ -4,7 +4,7 @@ This repository contains different code examples in different programming langua
 
 ### Website
 
-**[https://codes.snowflakedev.org](https://codes.snowflakedev.org)**
+**[https://codes.cesiumlabs.xyz/](https://codes.cesiumlabs.xyz/)**
 
 # How do I contribute?
 
