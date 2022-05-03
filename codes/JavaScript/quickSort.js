@@ -1,12 +1,12 @@
-function quickSort(array) {
+function quickSort(array, ascending=true) {
 	if (array.length < 2) return array;
-	let [head, ...tails] = array,
-		left = [],
-		equal = [],
-		right = [];
-	for (let element of tails) {
-		(element < head ? left : element > head ? right : equal).push(element);
-	}
-	return [...quickSort(left), head, ...equal, ...quickSort(right)];
+	let sorted;
+        if (ascending) {
+                sorted = array.sort((a,b) => a - b);
+        } else {
+                sorted = array.sort((a,b) => b - a);
+        }
+        return sorted;
 }
-quickSort([2, 3, 1, 5, 6, 4, 8, 9, 7, 10]);
+quickSort([2, 3, 1, 5, 6, 4, 8, 9, 7, 10]); //[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+quickSort([2, 3, 1, 5, 6, 4, 8, 9, 7, 10]); //[10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
